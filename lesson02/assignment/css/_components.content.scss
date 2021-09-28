@@ -8,10 +8,24 @@ html {
     box-sizing: inherit;
 }
 
+.grid-main {
+    display: grid;
+}
+
 .main {
     padding: 2rem;
 }
 
 h1 {
-    color: $red;  
+    color: $header-gray;  
+}
+
+section {
+    background-color: $gray;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
