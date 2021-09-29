@@ -10,6 +10,7 @@ html {
 
 .grid-main {
     display: grid;
+    grid-template-columns: repeat(12, minmax(150px, 1fr));
 }
 
 .main {
