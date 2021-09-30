@@ -10,36 +10,28 @@ boxForm1.addEventListener('submit', function(event) {
 
   //Split the array into multiple items
   const box1Array = Array.from(box1);
-  console.log(`The array is ${box1Array}`);
-  console.log(`The second digit in the array is ${box1Array[1]}`);
 
   //Count the number of digits entered in to the array
   let howMany = box1Array.length;
-  console.log(`The length ${howMany}`);
 
-
-
-  //Sum the total of all the items in the array
-
+  //Sum the total of all the numbers in the array
   let sum = box1Array.reduce(function(sum, value) {
     return Number(sum) + Number(value);
   });
 
+  //console.log things to help with troubleshooting
+  console.log(`The array is ${box1Array}`);
+  console.log(`The second digit in the array is ${box1Array[1]}`);
+  console.log(`The length ${howMany}`);
   console.log(`The sum is ${sum}`);
 
 
   //Handling output
-
   const p = document.createElement('p');
-  const p2 = document.createElement('p');
-  const text = document.createTextNode(`There are ${howMany} numbers entered total`);
-  const text2 = document.createTextNode(`Their sum is ${sum}`)
+  const text = document.createTextNode(`There are ${howMany} numbers entered. Their sum is ${sum}.`);
 
   p.appendChild(text);
-  p2.appendChild(text2);
-
   this.appendChild(p);
-  this.appendChild(p2);
 })
 
 
@@ -51,16 +43,28 @@ boxForm2.addEventListener('submit', function(event) {
   //Handling input
   let box2 = document.querySelector('.input2').value;
 
+  //Create the array from user input
   const box2Array = Array.from(box2);
+
+	//Square each number in the array
+  const box2Squared = box2Array.map(x => x ** 2);
+
+	//Concatenate the string to allow mathematic manipulation of the whole array
+  const box2AddUp = box2Array.reduce(function(sum, value) {
+    return sum + value;
+  })
+
   console.log(`${box2Array}`);
+  console.log(box2Squared);
+  console.log(box2AddUp ** 2);
 
 
   //Handling output
-  const p2 = document.createElement('p');
-  const text2 = document.createTextNode(`${box2Array}`);
+  const p = document.createElement('p');
+  const text = document.createTextNode(`Here you have it ${box2Squared}. The square of the entire number is ${box2AddUp ** 2}`);
 
-  p2.appendChild(text2);
-  this.appendChild(p2);
+  p.appendChild(text);
+  this.appendChild(p);
 })
 
 
@@ -93,16 +97,23 @@ boxForm4.addEventListener('submit', function(event) {
   event.preventDefault();
 
   //Handling input
+  let box1 = document.querySelector('.input1').value;
+  let box2 = document.querySelector('.input2').value;
+  let box3 = document.querySelector('.input3').value;
   let box4 = document.querySelector('.input4').value;
 
-  const box4Array = Array.from(box2);
-  console.log(box2Array);
+  /* const newArrayNow.forEach(box1)
+    const addsUp = parseInt(box1);
+
+    console.log(addsUp); */
+
+  //const box4Array = Array.from(newBoxValue);
 
 
   //Handling output
-  const p4 = document.createElement('p');
-  const text4 = document.createTextNode(`${box4Array}`);
+  /* const p4 = document.createElement('p');
+  const text4 = document.createTextNode(`The sum of the first 3 boxes * 2 and ${box4} is ${totalSum}`);
 
   p4.appendChild(text4);
-  this.appendChild(p4);
+  this.appendChild(p4); */
 })
