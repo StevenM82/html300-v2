@@ -1,3 +1,6 @@
+//ES6 methods used Array.from(); Array.length; Array.reduce(); Array.map();
+
+
 /*-----Box 1-----*/
 
 const boxForm1 = document.querySelector('#box-1');
@@ -46,10 +49,10 @@ boxForm2.addEventListener('submit', function(event) {
   //Create the array from user input
   const box2Array = Array.from(box2);
 
-	//Square each number in the array
+  //Square each number in the array
   const box2Squared = box2Array.map(x => x ** 2);
 
-	//Concatenate the string to allow mathematic manipulation of the whole array
+  //Concatenate the string to allow mathematic manipulation of the whole array
   const box2AddUp = box2Array.reduce(function(sum, value) {
     return sum + value;
   })
@@ -101,6 +104,19 @@ boxForm4.addEventListener('submit', function(event) {
   let box2 = document.querySelector('.input2').value;
   let box3 = document.querySelector('.input3').value;
   let box4 = document.querySelector('.input4').value;
+
+  const box1Array = Array.from(box1);
+  const box2Array = Array.from(box2);
+  const box3Array = Array.from(box3);
+
+
+  box1Array.forEach(function(value) {
+    console.log("first array " + box1Array[0]);
+  })
+
+  console.log(box1Array, box2Array, box3Array);
+  console.log(box1Array.length);
+  console.log(parseInt(box1Array));
 
   /* const newArrayNow.forEach(box1)
     const addsUp = parseInt(box1);
