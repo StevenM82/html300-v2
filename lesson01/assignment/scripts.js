@@ -105,18 +105,34 @@ boxForm4.addEventListener('submit', function(event) {
   let box3 = document.querySelector('.input3').value;
   let box4 = document.querySelector('.input4').value;
 
-  const box1Array = Array.from(box1);
-  const box2Array = Array.from(box2);
-  const box3Array = Array.from(box3);
+
+	const box4Array = Array.from(box1 + box2 + box3);
+
+  //Consolidate all of the arrays into a single string array
+	const inputString = box4Array.map(userNumbers => userNumbers);
+  console.log("input string " + inputString);
+
+  //Convert the input string array into an int array, remove all numbers smaller than 1
+  //and then add up their total
+  const userInputNumbers = inputString
+  	.map((convertedInput) => Number(convertedInput))
+    .filter((convertedInput) => convertedInput > 1)
+    .reduce((convertedInput, sum) => convertedInput + sum, 0);
 
 
-  box1Array.forEach(function(value) {
-    console.log("first array " + box1Array[0]);
-  })
+  console.log(`the sum of all the user input is ${userInputNumbers}`);
 
-  console.log(box1Array, box2Array, box3Array);
-  console.log(box1Array.length);
-  console.log(parseInt(box1Array));
+
+
+  /* const array3 = box1Array.concat(box2Array);
+  console.log("I am array 3: " + array3);
+
+
+   box1Array.forEach(function(numbered){
+    let more = numbered;
+    let moreNumbers = parseInt(more);
+    console.log("I am a number: " + moreNumbers);
+  })  */
 
   /* const newArrayNow.forEach(box1)
     const addsUp = parseInt(box1);
@@ -133,3 +149,4 @@ boxForm4.addEventListener('submit', function(event) {
   p4.appendChild(text4);
   this.appendChild(p4); */
 })
+ 
