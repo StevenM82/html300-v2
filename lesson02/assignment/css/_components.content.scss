@@ -8,8 +8,18 @@ html {
     box-sizing: inherit;
 }
 
+@mixin grid-main {
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+}
+
 .grid-main{
   @include grid-main;
+  margin: 2rem;
+  border: 5rem solid $card-gray;
+  border-radius: 1rem;
+  padding: 3rem;
 }
 
 .main {
@@ -40,7 +50,7 @@ html {
 
 .section {
     grid-column: span 3;
-    background-color: $gray;
+    background-color: $base-color;
 }
 
 article {
