@@ -20,6 +20,11 @@ html {
   border: 5rem solid $card-gray;
   border-radius: 1rem;
   padding: 3rem;
+
+  @include media-query("small"){
+    justify-content: center;
+    border: 1.5rem solid $card-gray;
+  }
 }
 
 .main {
@@ -38,6 +43,7 @@ html {
         font-weight: 700;
         font-size: 4rem;
         margin-bottom: 0.75rem;
+
     }
 
     .h2 {
@@ -60,6 +66,11 @@ article {
     align-items: center;
     font-size: 1.25rem;
     padding-left: 3rem;
+
+    @include media-query("small") {
+      flex-direction: column;
+      padding-left: 0;
+    }
 
     p {
       padding-left: 0.5rem;
