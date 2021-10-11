@@ -1,0 +1,19 @@
+//make the grid responsive using minmax
+@mixin grid-main {
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+}
+
+//set the weight and color of h2 and article text
+@mixin text-weight-color {
+  color: $header-gray;
+  font-weight: 100;
+}
+
+//style the text for the user's linkedIn profile
+@mixin text-class {
+  color: $header-gray;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}

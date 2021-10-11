@@ -8,19 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-//make the grid responsive using minmax
-@mixin grid-main {
-    --auto-grid-min-size: 16rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-}
-
-//set the weight and color of h2 and article text
-@mixin text-weight-color {
-  color: $header-gray;
-  font-weight: 100;
-}
-
 .grid-main{
   @include grid-main;
   margin: 2rem;
@@ -41,6 +28,7 @@ html {
     grid-column: span 2;
     align-items: center;
 
+    //User avatar with the outer corners rounded to make a circle
     .img {
       border-radius: 40rem;
       width: 75%;
@@ -72,6 +60,7 @@ html {
 .section {
     grid-column: span 3;
     background-color: $base-color;
+    padding-top: 2rem;
 
     @include media-query("mobile"){
       grid-column: span 2;
@@ -102,6 +91,10 @@ article {
       padding-left: 0;
     }
 
+    .last-article {
+      padding-top: 5rem;
+    }
+
     p {
       @include text-weight-color
       padding-left: 0.5rem;
@@ -109,6 +102,10 @@ article {
       @include media-query("ipad") {
         font-size: 2rem;
       }
+    }
+
+    .linkedInText {
+      @include text-class;
     }
 
     h3 {
@@ -119,8 +116,8 @@ article {
       }
     }
 
-    .img {
-      width: 10%;
+    .img-article {
+      width: 7%;
 
       @include media-query("ipad"){
         width: 15%;
