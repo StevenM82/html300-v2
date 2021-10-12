@@ -8,10 +8,119 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.grid-main{
+  @include grid-main;
+  margin: 2rem;
+  border: 5rem solid $card-gray;
+  border-radius: 1rem;
+  padding: 3rem;
+
+  @include media-query("mobile"){
+    justify-content: center;
+    border: 1.5rem solid $card-gray;
+    padding-bottom: 0;
+  }
 }
 
-h1 {
-    color: $red;  
+.main {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    align-items: center;
+
+    //User avatar with the outer corners rounded to make a circle
+    .img {
+      border-radius: 40rem;
+      width: 75%;
+    }
+
+    .h1 {
+      color: $header-gray;
+      font-weight: 700;
+      font-size: 4rem;
+      margin-bottom: 0.75rem;
+
+      @include media-query("mobile"){
+        padding-left: 1rem;
+      }
+    }
+
+    .h2 {
+      @include text-weight-color
+        margin: 0;
+        font-size: 3rem;
+
+      @include media-query("mobile"){
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+}
+
+.section {
+    grid-column: span 3;
+    background-color: $base-color;
+    padding-top: 2rem;
+
+    @include media-query("mobile"){
+      grid-column: span 2;
+    }
+    @include media-query("ipad"){
+      margin-top: 3rem;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.25rem;
+    padding-left: 3rem;
+
+    //two media queries to adjust the article elements
+    @include media-query("ipad") {
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    @include media-query("mobile") {
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    p {
+      @include text-weight-color
+      padding-left: 0.5rem;
+
+      @include media-query("ipad") {
+        font-size: 2rem;
+      }
+    }
+
+    .linkedInText {
+      @include text-class;
+    }
+
+    h3 {
+      color: $header-gray;
+
+      @include media-query("ipad") {
+        font-size: 2.25rem;
+      }
+    }
+
+    .img-article {
+      width: 7%;
+
+      @include media-query("ipad"){
+        width: 15%;
+      }
+
+      @include media-query("mobile"){
+        width: 15%;
+      }
+    }
 }
