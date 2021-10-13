@@ -77,6 +77,7 @@ const cardsJSON = `[
    /* Create the containers for the page */
    //Grid container for the page
    const gridContainer = document.createElement('div');
+   gridContainer.classList.add('grid-main');
 
    //A container for all of the new cards
     const container = document.querySelector('.template-hook');
@@ -96,41 +97,49 @@ const cardsJSON = `[
         let userInfoText = document.createElement('p');
         let linkedInImg = document.createElement('img');
 
-        //container.append(userCard);
-        userCard.append(userImage);
-        userCard.append(userName);
-        userCard.append(userJob);
-
-        userInfo.append(userInfoHeading);
-        userInfoHeading.append(userInfoText);
-
         console.log(userCard);
         console.log(userInfo);
+
+        /* Assign all of the classes */
+        userCard.classList.add('main');
+        userImage.classList.add('img');
+        //userName.classList.add('h1');
+        userJob.classList.add('h2');
+
+        userCard.innerHTML = `
+    <img>
+    <h1 class="h1">${el.name}</h1>
+    <h2>${el.jobTitle}</h2>
+    `;
+
+    userInfo.innerHTML = `
+    <h3>Company: </h3>
+    <p>${el.company}</p>
+
+    <h3>Experience: </h3>
+    <p>${el.experience}</p>
+
+    <h3>School: </h3>
+    <p>${el.school}</p>
+
+    <h3>Major: </h3>
+    <p>${el.major}</p>
+
+    <h3>Email: </h3>
+    <p>${el.email}</p>
+
+    <img>
+    <p>${el.linkedInUrl}</p>
+    `;
+    
+    container.append(userCard);
+    container.append(userInfo);
+
+    userCard.append(userImage);
+    userCard.append(userName);
+    userCard.append(userJob);
+
+    userInfo.append(userInfoHeading);
+    userInfoHeading.append(userInfoText);
+
     })
-   
-   /* Assign all of the classes */
-   gridContainer.classList.add('grid-main');
-
-   //userCard.classList.add('main');
-   userImage.classList.add('img');
-   userName.classList.add('h1');
-   userJob.classList.add('h2');
-   
-   
-
-
-   //Append all items to each other, then container and then grid
-   //document.body.appendChild(gridContainer);
-//    container.append(userCard);
-
-//    document.body.appendChild(container);
-
-   //userCard has the main information attached to it
-//    userCard.append(userImage);
-//    userCard.append(userName);
-//    userCard.append(userJob);
-//    userCard.append(userInfo);
-
-//    userInfo.append(userInfoHeading);
-//    container.appendChild(userName);
-//    container.append(userInfo);
