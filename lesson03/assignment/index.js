@@ -59,33 +59,30 @@ const cardsJSON = `[
 
    class Carded{
     constructor(name, jobTitle, company, experience, school, major, email, linkedInUrl){
-      this.name = name;
-      this.jobTitle = jobTitle;
-      this.company = company;
-      this.experience = experience;
-      this.school = school;
-      this.major = major;
-      this.email = email;
-      this.linkedInUrl = linkedInUrl;
+        this.name = name;
+        this.jobTitle = jobTitle;
+        this.company = company;
+        this.experience = experience;
+        this.school = school;
+        this.major = major;
+        this.email = email;
+        this.linkedInUrl = linkedInUrl;
     }
   }
-   /*
-   Used local JSON for data, not hardcoded
-   Use of object/array methods & components appear with correct data 
-   */
 
-   /* Create the containers for the page */
-   //Grid container for the page
-   const gridContainer = document.createElement('div');
-   gridContainer.classList.add('grid-main');
+    /* Create the containers for the page */
+    //Grid container for the page
+    const gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid-main');
 
-   //A container for all of the new cards
+    //A container for all of the new cards
     const container = document.querySelector('.template-hook');
     const sectionClass = document.querySelector('section');
 
-    /* Create all of the elements for the user */
-    //User image, name and job title
+    
     cards.forEach(function(el){
+        /* Create all of the elements for the user */
+        //User image, name and job title
         let userCard = document.createElement('main');
         let userImage = document.createElement('img');
         let userName = document.createElement('h1');
@@ -100,46 +97,46 @@ const cardsJSON = `[
         console.log(userCard);
         console.log(userInfo);
 
+
         /* Assign all of the classes */
+        userCard.setAttribute('class', 'main');
+        userImage.setAttribute('class', 'img');
+        userName.setAttribute('class', 'h1');
+        userJob.setAttribute('class', 'h2');
+
         userCard.classList.add('main');
         userImage.classList.add('img');
-        //userName.classList.add('h1');
-        userJob.classList.add('h2');
-
+        
+        /* Assign all of the innerHTML */ 
+        //User name and current job title
         userCard.innerHTML = `
-    <img>
-    <h1 class="h1">${el.name}</h1>
-    <h2>${el.jobTitle}</h2>
-    `;
-
-    userInfo.innerHTML = `
-    <h3>Company: </h3>
-    <p>${el.company}</p>
-
-    <h3>Experience: </h3>
-    <p>${el.experience}</p>
-
-    <h3>School: </h3>
-    <p>${el.school}</p>
-
-    <h3>Major: </h3>
-    <p>${el.major}</p>
-
-    <h3>Email: </h3>
-    <p>${el.email}</p>
-
-    <img>
-    <p>${el.linkedInUrl}</p>
-    `;
+        <img class="img" src="img/headshot.jpg">
+        <h1>${el.name}</h1>
+        <h2>${el.jobTitle}</h2>
+        `;
     
-    container.append(userCard);
-    container.append(userInfo);
-
-    userCard.append(userImage);
-    userCard.append(userName);
-    userCard.append(userJob);
-
-    userInfo.append(userInfoHeading);
-    userInfoHeading.append(userInfoText);
-
+        userInfo.innerHTML = `
+        <h3>Company: </h3>
+        <p>${el.company}</p>
+    
+        <h3>Experience: </h3>
+        <p>${el.experience}</p>
+    
+        <h3>School: </h3>
+        <p>${el.school}</p>
+    
+        <h3>Major: </h3>
+        <p>${el.major}</p>
+    
+        <h3>Email: </h3>
+        <p>${el.email}</p>
+    
+        <img>
+        <p>${el.linkedInUrl}</p>
+        `;
+        
+        document.body.append(gridContainer);
+        gridContainer.append(container);
+        container.append(userCard);
+        container.append(userInfo);
     })
