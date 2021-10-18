@@ -67,56 +67,56 @@ const cardsJSON = `[
          this.major = major;
          this.email = email;
          this.linkedInUrl = linkedInUrl;
-       }
-     }
+        }
+    }
 
-     //A container for all of the user cards
-     const container = document.querySelector('.template-hook');
+    //A container for all of the user cards
+    const container = document.querySelector('.template-hook');
 
-   /* Create all of the elements for the user */
-   cards.forEach(function(el){
-     //Creates a grid for each user card that is created
-     const gridContainer = document.createElement('div');
-     gridContainer.classList.add('grid-main');
+    /* Create all of the elements for the user */
+    cards.forEach(function(el){
+        //Creates a grid for each user card that is created
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('grid-main');
 
-     let userCard = document.createElement('main');
-     let userSection = document.createElement('section');
-     let userInfo = document.createElement('article');
+        let userCard = document.createElement('main');
+        let userSection = document.createElement('section');
+        let userInfo = document.createElement('article');
 
-     //Add the classes for the 'main' and 'section' elements
-      userCard.classList.add('main');
-      userSection.classList.add('section');
+        //Add the classes for the 'main' and 'section' elements
+        userCard.classList.add('main');
+        userSection.classList.add('section');
 
-      //Add the HTML to fill in the userCard and userInfo
-      userCard.innerHTML = `
-      <img class="img" src="img/headshot.jpg">
-      <h1 class="h1">${el.name}</h1>
-      <h2 class="h2"><i>${el.jobTitle}</i></h2>
-      `;
+        //Add the HTML to fill in the userCard and userInfo
+        userCard.innerHTML = `
+        <img class="img" src="img/headshot.jpg">
+        <h1 class="h1">${el.name}</h1>
+        <h2 class="h2"><i>${el.jobTitle}</i></h2>
+        `;
 
-      userInfo.innerHTML = `
-      <h3>Company:</h3>
-      <p>${el.company}</p>
+        userInfo.innerHTML = `
+        <h3>Company:</h3>
+        <p>${el.company}</p>
 
-      <h3>Experience:</h3>
-      <p>${el.experience}</p>
+        <h3>Experience:</h3>
+        <p>${el.experience}</p>
 
-      <h3>School:</h3>
-      <p>${el.school}</p>
+        <h3>School:</h3>
+        <p>${el.school}</p>
 
-      <h3>Major:</h3>
-      <p>${el.major}</p>
+        <h3>Major:</h3>
+        <p>${el.major}</p>
 
-      <h3>Email:</h3>
-      <p>${el.email}</p>
+        <h3>Email:</h3>
+        <p>${el.email}</p>
 
-      <img src="img/linkedin.svg">
-      <p>${el.linkedInUrl}</p>
-      `;
+        <img src="img/linkedin.svg">
+        <p>${el.linkedInUrl}</p>
+        `;
 
-    container.append(gridContainer);
-    gridContainer.append(userCard);
-    gridContainer.append(userSection);
-    userSection.append(userInfo);
+        container.append(gridContainer);
+        gridContainer.append(userCard);
+        gridContainer.append(userSection);
+        userSection.append(userInfo);
 
    })
