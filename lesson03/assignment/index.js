@@ -79,10 +79,9 @@ cards.forEach(function(el){
     const gridContainer = document.createElement('div');
     gridContainer.classList.add('grid-main');
 
+    //User main element to place before the section element
     let userMain = document.createElement('main');
-    let userImage = document.createElement('img');
-    let userName = document.createElement('h1');
-    let userJob = document.createElement('h2');
+
     //User background information
     let userSection = document.createElement('section');
     let userArticle0 = document.createElement('article');
