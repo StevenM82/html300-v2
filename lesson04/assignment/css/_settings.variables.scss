@@ -12,4 +12,8 @@ $blue: #150f96;
 
 $base-color: #f6f5f6; //rgb 246, 245, 246
 $card-gray: darken($base-color, 14%);
-$header-gray: darken($base-color, 52%)
+$header-gray: darken($base-color, 52%);
+
+$imageURL: "https://picsum.photos/id/190/1920/1080";
+$dur: 4s;
+$ease: cubic-bezier(0.85, 0, 0.15, 1);

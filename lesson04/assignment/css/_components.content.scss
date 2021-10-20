@@ -3,7 +3,7 @@
 }
 
 h1 {
-    color: green;
+    color: orange;
     font-size: 3rem;;
 }
 
@@ -20,17 +20,13 @@ h1 {
 //     z-index: 2;
 //     font-size: 0.7em;
 //     box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3),inset 0 0 0.7em;
-//     -webkit-transition: all 0.5s ease-in; text-align:center
+//     text-align:center
 //     }
 //     a.polaroid:hover, a.polaroid:focus, a.polaroid:active {
 //     z-index: 999;
 //     border-color: #999;
-//     -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4),inset
-//     -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4),inset 0 0
 //     box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4),inset 0 0 0.7e
-//     -webkit-transform: rotate(0deg) scale(1.05);
-//     -moz-transform: rotate(0deg) scale(1.05);
-//     transform: rotate(0deg) scale(1.05);-webkit-filter: blur(0p
+//     transform: rotate(0deg) scale(1.05);
 //     }
 //     .polaroid img {
 //     margin: 0 0 15px;
@@ -55,8 +51,6 @@ h1 {
 
 //     font-family: 'Satisfy', cursive;
 //     padding: 0.4em 0.8em 0.3em 0.8em;
-//     -webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
-//     -moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
 //     box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
 //     border-radius: 5px; border:1px solid #CCC
 //     }
@@ -147,9 +141,6 @@ h1 {
 
 //This one moves the heading up and down
 //https://codepen.io/ZachSaucier/pen/RwVdEJO
-$imageURL: "https://picsum.photos/id/190/1920/1080";
-$dur: 4s;
-$ease: cubic-bezier(0.85, 0, 0.15, 1);
 
 body {
   margin: 0;
@@ -216,53 +207,53 @@ body {
     }
   }
   
-  figcaption {
-    line-height: 0.4;
-  }
-  cite {
-    font-style: normal;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.4em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+//   figcaption {
+//     line-height: 0.4;
+//   }
+//   cite {
+//     font-style: normal;
+//     font-family: 'Nunito', sans-serif;
+//     font-size: 0.4em;
+//     color: #fff;
+//     text-transform: uppercase;
+//     letter-spacing: 0.2em;
     
-    animation: fadeInAuthor $dur $ease infinite alternate;
-  }
-}
+//     animation: fadeInAuthor $dur $ease infinite alternate;
+//   }
+// }
 
-@keyframes moveCutClip {
-  0%, 25% {
-    clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
-  }
-  75%, 100% {
-    clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
-  }
-}
+// @keyframes moveCutClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
 
-@keyframes moveTopColoredClip {
-  0%, 25% {
-    clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
-  }
-  75%, 100% {
-    clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-  }
-}
+// @keyframes moveTopColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
 
-@keyframes moveBottomColoredClip {
-  0%, 25% {
-    clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-  }
-  75%, 100% {
-    clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
-  }
-}
+// @keyframes moveBottomColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
+//   }
+// }
 
-@keyframes fadeInAuthor {
-  0%, 25% {
-    opacity: 0;
-  }
-  75%, 100% {
-    opacity: 1;
-  }
-}
+// @keyframes fadeInAuthor {
+//   0%, 25% {
+//     opacity: 0;
+//   }
+//   75%, 100% {
+//     opacity: 1;
+//   }
+// }
