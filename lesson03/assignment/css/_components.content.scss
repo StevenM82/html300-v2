@@ -78,7 +78,7 @@ article {
     flex-wrap: wrap;
     align-items: center;
     font-size: 1.25rem;
-    padding: 1rem 3rem;
+    padding: 1rem 3rem 0;
 
     //two media queries to adjust the article elements
     @include media-query("ipad") {
