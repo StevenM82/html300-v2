@@ -1,5 +1,4 @@
 // Colors
-$gray: #f6f5f6;
 $white: #ffffff;
 $black: #000000;
 $green: #7acb00;
@@ -10,3 +9,7 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+$base-color: #f6f5f6; //rgb 246, 245, 246
+$card-gray: darken($base-color, 14%);
+$header-gray: darken($base-color, 52%)
