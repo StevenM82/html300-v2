@@ -17,16 +17,16 @@
   }
   h1 {
     @include h1-h2_font;
-    grid-area: 1 / 1 / 2 / span 12;
+    grid-area: 1 / -1 / 2 / span 12;
     font-size: 3rem;
-    padding: 10px;
-    
+    margin: 2rem 0 0;
   }
   h2 {
     @include h1-h2_font;
     grid-area: 2 / 2 / 2 / span 12;
     font-size: 2rem;
     line-height: 1.1;
+    margin: 0;
   }
 }
 
@@ -39,90 +39,100 @@
   margin: auto;
   margin: 4rem auto;
   position: relative;
-  height: 500px;
-  width: 800px;
+  height: 700px;
+  width: 500px;
 }
 .pics a {
   background:#fff;
-  display:inline;
-  width:auto;
-  padding:10px 10px 30px 10px;
-  text-align:center;
-  text-decoration:none;
-  color:#333;
-  font-family:'Nothing You Could Do', cursive;
-  font-size:28px;
-  font-weight:bold;
-  -webkit-box-shadow:0px 0px 10px rgba(0,0,0,1);
-  -moz-box-shadow:0px 0px 10px rgba(0,0,0,1);
-  box-shadow:0px 0px 10px rgba(0,0,0,1);
-  -webkit-transition:all .30s;
-  -moz-transition:all .30s;
-  -o-transition:all .30s;
-  transition:all .30s;
-  position:absolute;
+  display: inline;
+  width: auto;
+  padding: 10px 10px 30px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  -webkit-transition: all .30s;
+  -moz-transition: all .30s;
+  -o-transition: all .30s;
+  transition: all .30s;
+  position: absolute;
 }
 .pics img {
-  display:block;
-  padding-bottom:20px;
+  display: block;
+  padding-bottom: 20px;
 }
-//Set z-index high in order to place it on top of the other images
+
+//This keeps the images smaller on the screen
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+}
+//Brings images to the top of the stack
 .pics a:hover {
   z-index:100;
 }
 .pics a:after {
-  content:attr(title);
+  content: attr(title);
 }
 
 /* Pictures placement, scaling and rotation */
+//The image and the pics container stay together 
 .pics li:nth-child(1n) a {
   -webkit-transform:rotate(30deg) scale(0.7,0.7);
   -moz-transform:rotate(30deg) scale(0.7,0.7);
   transform:rotate(30deg) scale(0.7,0.7);
   top:0%;
-  left:60%;
+  left:-20%;
 }
 .pics li:nth-child(2n) a {
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
   -moz-transform:rotate(-30deg) scale(0.7,0.7);
   transform:rotate(-30deg) scale(0.7,0.7);
-  top:40%;
-  left:80%;
+  top:14%;
+  left:14%;
 }
 .pics li:nth-child(3n) a {
   -webkit-transform:rotate(40deg) scale(0.7,0.7);
   -moz-transform:rotate(40deg) scale(0.7,0.7);
   transform:rotate(40deg) scale(0.7,0.7);
-  top:50%;
-  left:-10%;
+  top:28%;
+  left:28%;
 }
 .pics li:nth-child(4n) a {
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
   -moz-transform:rotate(-30deg) scale(0.7,0.7);
   transform:rotate(-30deg) scale(0.7,0.7);
-  top:0%;
-  left:-10%;
+  top:42%;
+  left:42%;
 }
 .pics li:nth-child(5n) a {
   -webkit-transform:rotate(-20deg) scale(0.8,0.8);
   -moz-transform:rotate(-20deg) scale(0.8,0.8);
   transform:rotate(-20deg) scale(0.8,0.8);
-  top:50%;
-  left:20%;
+  top:56%;
+  left:56%;
   z-index:3;
 }
 .pics li:nth-child(6n) a {
   -webkit-transform:rotate(30deg) scale(0.7,0.7);
   -moz-transform:rotate(30deg) scale(0.7,0.7);
   transform:rotate(30deg) scale(0.7,0.7);
-  top:60%;
-  left:55%;}
+  top:70%;
+  left:70%;
+  z-index: 3;
+}
 .pics li:nth-child(7n) a {
   -webkit-transform:rotate(10deg) scale(0.7,0.7);
   -moz-transform:rotate(10deg) scale(0.7,0.7);
   transform:rotate(10deg) scale(0.7,0.7);
-  top:0%;
-  left:25%;
+  top:80%;
+  left:80%;
+  z-index: 4;
 }
 
 /* Pictures rotation and scaling on hover */
@@ -149,6 +159,7 @@
 
 //https://polypane.app/css-3d-transform-examples/
 //3D Transform #8 by DocSpo
+
 // div {
 //     transform:
 //       perspective(750px)
