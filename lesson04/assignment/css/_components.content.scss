@@ -1,145 +1,104 @@
 * {
-    box-sizing: border-box;
-    padding:0;
-    list-style:none;
+  box-sizing: border-box;
+  padding:0;
+  list-style: none;
 }
 
 .grid-container {
-  @include grid-main;
+display: grid;
+grid-template-columns: repeat(12, 1fr);
 
   .main {
     display: grid;
+    grid-area: 1 / 1 / 2 /  span 12;
   }
   .header-img {
-    grid-area: 1 / 1 / span 12 / span 12;
+    grid-area: 1 / 1 / span 12 /  span 12;
     height: 100vh;
-    width: 100vw;
   }
-  h1 {
-    @include h1-h2_font;
-    grid-area: 1 / -1 / 2 / span 12;
-    font-size: 3rem;
-    margin: 2rem 0 0;
+  .flex-heading {
+    display: flex;
+    flex-direction: column;
+    grid-area: 2 / 1 / 2 / span 12;
+    justify-content: flex-end;
+    h1 {
+      @include h1-h2_font;
+      grid-area: 1 / 1 / 2 / span 12;
+      font-size: 3rem;
+      margin: 0;
+    }
+    h2 {
+      @include h1-h2_font;
+      grid-area: 2 / 2 / 2 / 12;
+      font-size: 2rem;
+      margin: 0;
+    }
   }
-  h2 {
-    @include h1-h2_font;
-    grid-area: 2 / 2 / 2 / span 12;
-    font-size: 2rem;
-    line-height: 1.1;
-    margin: 0;
+  .nav {
+    grid-area: 12 / 1 / 12 / span 12;
+    color: $white;
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      font-size: 1.5rem;
+    }
+    //Hover transition:
+    //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
+    a {
+      color: $white;
+      text-decoration: none;
+      padding: 0 2rem;
+      transition: .5s all ease-in-out;
+
+    }
+    //fade in and change the text and background color and add a border
+    a:hover {
+      color: $neon-yellow;
+      box-shadow: 0 0 5px $neon-yellow;
+      text-shadow: 0 0 5px $neon-yellow;
+      background-color: rgb(63, 63, 63);
+      border-radius: 3rem;
+      font-size: 2rem;
+    }
   }
 }
 
-//Original code found at:
-//https://blogohblog.com/css3-polaroid-gallery/
 
-//All -webkit-, -moz- and -o- are included for browser compatibility
+.section {
+  @include grid-main;
+  grid-area: 2 / 3 / 10 / 12;
 
-.pics {
-  margin: auto;
-  margin: 4rem auto;
-  position: relative;
-  height: 700px;
-  width: 500px;
+  .article {
+    grid-column: span 2;
+  }
 }
-.pics a {
-  background:#fff;
-  display: inline;
-  width: auto;
-  padding: 10px 10px 30px 10px;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  font-family: 'Nothing You Could Do', cursive;
-  font-size: 28px;
-  font-weight: bold;
-  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  -webkit-transition: all .30s;
-  -moz-transition: all .30s;
-  -o-transition: all .30s;
-  transition: all .30s;
-  position: absolute;
-}
-.pics img {
-  display: block;
-  padding-bottom: 20px;
+.sidebar {
+  @include grid-main;
+  grid-area: 2 / 1 / 10 / 3;
 }
 
-//This keeps the images smaller on the screen
-.polaroid-img {
-  width: 100%;
-  height: 100%;
-}
-//Brings images to the top of the stack
-.pics a:hover {
-  z-index:100;
-}
-.pics a:after {
-  content: attr(title);
-}
 
-/* Pictures placement, scaling and rotation */
-//The image and the pics container stay together 
-.pics li:nth-child(1n) a {
-  -webkit-transform:rotate(30deg) scale(0.7,0.7);
-  -moz-transform:rotate(30deg) scale(0.7,0.7);
-  transform:rotate(30deg) scale(0.7,0.7);
-  top:0%;
-  left:-20%;
-}
-.pics li:nth-child(2n) a {
-  -webkit-transform:rotate(-30deg) scale(0.7,0.7);
-  -moz-transform:rotate(-30deg) scale(0.7,0.7);
-  transform:rotate(-30deg) scale(0.7,0.7);
-  top:14%;
-  left:14%;
-}
-.pics li:nth-child(3n) a {
-  -webkit-transform:rotate(40deg) scale(0.7,0.7);
-  -moz-transform:rotate(40deg) scale(0.7,0.7);
-  transform:rotate(40deg) scale(0.7,0.7);
-  top:28%;
-  left:28%;
-}
-.pics li:nth-child(4n) a {
-  -webkit-transform:rotate(-30deg) scale(0.7,0.7);
-  -moz-transform:rotate(-30deg) scale(0.7,0.7);
-  transform:rotate(-30deg) scale(0.7,0.7);
-  top:42%;
-  left:42%;
-}
-.pics li:nth-child(5n) a {
-  -webkit-transform:rotate(-20deg) scale(0.8,0.8);
-  -moz-transform:rotate(-20deg) scale(0.8,0.8);
-  transform:rotate(-20deg) scale(0.8,0.8);
-  top:56%;
-  left:56%;
-  z-index:3;
-}
-.pics li:nth-child(6n) a {
-  -webkit-transform:rotate(30deg) scale(0.7,0.7);
-  -moz-transform:rotate(30deg) scale(0.7,0.7);
-  transform:rotate(30deg) scale(0.7,0.7);
-  top:70%;
-  left:70%;
-  z-index: 3;
-}
-.pics li:nth-child(7n) a {
-  -webkit-transform:rotate(10deg) scale(0.7,0.7);
-  -moz-transform:rotate(10deg) scale(0.7,0.7);
-  transform:rotate(10deg) scale(0.7,0.7);
-  top:80%;
-  left:80%;
-  z-index: 4;
-}
+.footer {
+  @include grid-main;
+  grid-area: 11 / 1 / 12 / span 12;
+  background-color: $blue;
 
-/* Pictures rotation and scaling on hover */
-.pics li:nth-child(n) a:hover {
-  -webkit-transform:rotate(0deg) scale(1,1);
-  -moz-transform:rotate(0deg) scale(1,1);
-  transform:rotate(0deg) scale(1,1);
+  .footer-img {
+    grid-area: 1 / 1 /  12 / span 12;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: 1 / 1 /  12 / span 12;
+    justify-content: space-evenly;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+  }
 }
 
 /*Column widths*/
@@ -170,7 +129,7 @@
 //     border: 5px solid #e6e6e6;
 //     box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
 //     transition: 0.4s ease-in-out transform;
-  
+
 //     &:hover {
 //       transform: translate3d(0px, 0px, -250px);
 //     }
@@ -178,84 +137,84 @@
 
 //This one moves a text background bar up and down, changing the visible text
 //https://codepen.io/ZachSaucier/pen/RwVdEJO
-  
+
 // html, body {
 //   height: 100%;
 //   background-image: url('images/lopez-island.jpg');
 // }
-  //   blockquote {
-  //     grid-area: 1 / 1 / 1 / span 12;
-  //     position: relative;
-  //     display: inline-block;
-  //     margin: 0;
-  //   }
+//   blockquote {
+//     grid-area: 1 / 1 / 1 / span 12;
+//     position: relative;
+//     display: inline-block;
+//     margin: 0;
+//   }
+  
+//   .cut-text-container {
+//     background-color: #fff;
+//     position: relative;
+//     z-index: 1;
+//     padding: 0px 50px;
     
-  //   .cut-text-container {
-  //     background-color: #fff;
-  //     position: relative;
-  //     z-index: 1;
-  //     padding: 0px 50px;
-      
-  //     animation: moveCutClip $dur $ease infinite alternate;
-      
-  //     .cut-text {
-  //       background-image: url(#{$imageURL});
-  //       margin: 0;
-  //     }
-      
-  //     span {
-  //       color: #000;
-  //       mix-blend-mode: lighten;
-  //       background-color: #0000ff;
-  //     }
-  //   }
+//     animation: moveCutClip $dur $ease infinite alternate;
     
-  //   .colored-text {
-  //     color: #fff;
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     animation: moveTopColoredClip $dur $ease infinite alternate;
-      
-  //     &.second {
-  //       top: 50%;
-  //       animation: moveBottomColoredClip $dur $ease infinite alternate;
-  //     }
-  //   }
+//     .cut-text {
+//       background-image: url(#{$imageURL});
+//       margin: 0;
+//     }
+    
+//     span {
+//       color: #000;
+//       mix-blend-mode: lighten;
+//       background-color: #0000ff;
+//     }
+//   }
   
-  // @keyframes moveCutClip {
-  //   0%, 25% {
-  //     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
-  //   }
-  //   75%, 100% {
-  //     clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
-  //   }
-  // }
-  
-  // @keyframes moveTopColoredClip {
-  //   0%, 25% {
-  //     clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
-  //   }
-  //   75%, 100% {
-  //     clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-  //   }
-  // }
-  
-  // @keyframes moveBottomColoredClip {
-  //   0%, 25% {
-  //     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-  //   }
-  //   75%, 100% {
-  //     clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
-  //   }
-  // }
-  
-  // @keyframes fadeInAuthor {
-  //   0%, 25% {
-  //     opacity: 0;
-  //   }
-  //   75%, 100% {
-  //     opacity: 1;
-  //   }
-  // }
+//   .colored-text {
+//     color: #fff;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     animation: moveTopColoredClip $dur $ease infinite alternate;
+    
+//     &.second {
+//       top: 50%;
+//       animation: moveBottomColoredClip $dur $ease infinite alternate;
+//     }
+//   }
+
+// @keyframes moveCutClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
+
+// @keyframes moveTopColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
+
+// @keyframes moveBottomColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
+//   }
+// }
+
+// @keyframes fadeInAuthor {
+//   0%, 25% {
+//     opacity: 0;
+//   }
+//   75%, 100% {
+//     opacity: 1;
+//   }
+// }

@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  <script src="index.js" async></script>
+  <title>Wanderlust a la Carte</title>
+</head>
+<body>
+  <div class="grid-container">
+    <main class="main">
+      <img class="header-img col-12" src="images/lopez-island.jpg">
+      <div class="flex-heading">
+        <h1>Wanderlust a la Carte</h1>
+        <h2>Not lost, but finding</h2>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#">The Beginning</a></li>
+          <li><a href="#">So far, so good</a></li>
+          <li><a href="#">Mistakes and Advice</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <section class="section">
+      <article class="article">
+        <p>Here is some text that is going to fill some space. 
+          Does this continue the line?
+        </p>
+      </article>
+      <article class="article">
+        <p>Here is some text that is going to fill some more space</p>
+      </article>
+      <article class="article">
+        <p>Here is some text that is it</p>
+      </article>
+      <article class="article">
+        <p>Text</p>
+      </article>
+    </section>
+
+    <section class="sidebar">
+      <article>
+        <img class="col-12" src="images/sushi.jpg">
+        <p>Now I need to think of the articles to write.</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer-nav">
+        <li><a href="#">The Beginning</a></li>
+        <li><a href="#">So far, pretty good</a></li>
+        <li><a href="#">Mistakes and Advice</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
 </html>
+
+<!-- This moves the heading up and down -->
+    <!-- https://codepen.io/ZachSaucier/pen/RwVdEJO -->
+    <!-- <main class="main" aria-label="You expect this pen to do one thing but it changed into something else. — Zach Saucier">
+      <blockquote cite="" aria-hidden>
+        
+        <p class="colored-text">
+          <span>but finding</span>
+        </p>
+
+        <div class="cut-text-container">
+          <h1 class="cut-text"><span>Wanderlust</span></h1>
+          <h2 class="cut-text"><span>a la Carte</span></h2>
+        </div>
+
+        <p class="colored-text second">
+          <span>Not lost</span>
+        </p>
+      </blockquote>
+    </main> -->
