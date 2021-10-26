@@ -7,6 +7,7 @@
 .grid-container {
 display: grid;
 grid-template-columns: repeat(12, 1fr);
+gap: 2rem;
 
   .main {
     display: grid;
@@ -40,8 +41,16 @@ grid-template-columns: repeat(12, 1fr);
     .nav-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      // justify-content: flex-start;
+      justify-content: space-evenly;
       font-size: 1.5rem;
+
+      @include media-query("mobile") {
+        flex-direction: column;
+        gap: 1rem;
+        padding: .5rem 0;
+        font-size: 1.25rem;
+      }
     }
     //Hover transition:
     //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
@@ -50,9 +59,8 @@ grid-template-columns: repeat(12, 1fr);
       text-decoration: none;
       padding: 0 2rem;
       transition: .5s all ease-in-out;
-
     }
-    //fade in and change the text and background color and add a border
+    //ease in and change the text and background color and add a border
     a:hover {
       color: $neon-yellow;
       box-shadow: 0 0 5px $neon-yellow;
@@ -64,18 +72,32 @@ grid-template-columns: repeat(12, 1fr);
   }
 }
 
-
 .section {
   @include grid-main;
+  gap: 1rem;
   grid-area: 2 / 3 / 10 / 12;
 
+  //make the articles appear more centered on smaller screens
+  @include media-query("mobile") {
+    grid-area: 2 / 2 / 10 / 12;
+  }
+
   .article {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 }
 .sidebar {
   @include grid-main;
-  grid-area: 2 / 1 / 10 / 3;
+  grid-area: 2 / 2 / 10 / 3;
+  row-gap: 2rem;
+
+  //make the sidebar disappear when the screen gets too small
+  @include media-query("mobile") {
+    display: none;
+  }
+  .sidebar-p {
+    margin: 0;
+  }
 }
 
 
@@ -93,6 +115,12 @@ grid-template-columns: repeat(12, 1fr);
     flex-wrap: wrap;
     grid-area: 1 / 1 /  12 / span 12;
     justify-content: space-evenly;
+
+    //stack the nav in a column instead of a row on smaller screens
+    @include media-query("mobile") {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
   a {
     text-decoration: none;
