@@ -19,7 +19,7 @@ gap: 2rem;
   }
   .header-img {
     grid-area: 1 / 1 / span 12 /  span 12;
-    height: 100vh;
+    height: 50vh;
   }
   //Set the flexbox inside the header to span the entire width to allow more 
   //options for placement of the h1 and h2 elements
@@ -94,6 +94,49 @@ gap: 2rem;
   //fit on the screen
   .article {
     grid-column: span 3;
+  }
+}
+.section-images {
+  @include grid-main;
+  grid-auto-rows: 200px;
+  grid-area: 2 / 2 / 10 / 12;
+  grid-auto-flow: dense;
+  li:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  li:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 5;
+  }
+  li:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  li:nth-child(4) {
+    grid-row: span 2;
+  }
+  li:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 6;
+  }
+  li:nth-child(6) {
+    grid-column: span 2;
+  }
+  li:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  li:nth-child(8) {
+    grid-column: span 2;
+  }
+  li:nth-child(9) {
+    grid-column: span 1;
+    grid-row: span 4;
+  }
+  li:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 2;
   }
 }
 
