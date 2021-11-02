@@ -98,7 +98,6 @@ gap: 2rem;
 }
 .section-images {
   @include grid-main;
-  grid-auto-rows: 200px;
   grid-area: 2 / 2 / 10 / 12;
   grid-auto-flow: dense;
   li:nth-child(1) {
