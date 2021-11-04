@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/grid";
+
 //Set the main grid container for the page leaving the rows implicit
 //This container will end up having a header, body and footer grid inside of it
 .grid-container {
@@ -11,7 +17,7 @@ display: grid;
 grid-template-columns: repeat(12, 1fr);
 gap: 2rem;
 
-  //Set a header grid that only covers one row of the page grid container, but 
+  //Set a header grid that only covers one row of the page grid container, but
   //spans the entire width of the page
   .main {
     display: grid;
@@ -20,8 +26,9 @@ gap: 2rem;
   .header-img {
     grid-area: 1 / 1 / span 12 /  span 12;
     height: 50vh;
+    width: 100%;
   }
-  //Set the flexbox inside the header to span the entire width to allow more 
+  //Set the flexbox inside the header to span the entire width to allow more
   //options for placement of the h1 and h2 elements
   .flex-heading {
     display: flex;
@@ -80,6 +87,7 @@ gap: 2rem;
 }
 
 //Set the section element to be the outer grid container for the body of the page
+//This is used on the index.html page only
 .section {
   @include grid-main;
   gap: 1rem;
@@ -90,12 +98,14 @@ gap: 2rem;
     grid-area: 2 / 2 / 10 / 12;
   }
 
-  //allow the grid to place the as many articles that span 3 columns on one row as 
+  //allow the grid to place the as many articles that span 3 columns on one row as
   //fit on the screen
   .article {
     grid-column: span 3;
   }
 }
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the images.html page only
 .section-images {
   @include grid-main;
   grid-area: 2 / 2 / 10 / 12;
@@ -136,7 +146,26 @@ gap: 2rem;
   }
 }
 
-//create a small grid to go alongside the body 
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the boot-grid.html page only
+.section-grid {
+  @include grid-main;
+  gap: 1rem;
+  grid-area: 2 / 3 / 10 / 12;
+
+  //make the articles appear more centered on smaller screens
+  @include media-query("mobile") {
+    grid-area: 2 / 2 / 10 / 12;
+  }
+
+  //allow the grid to place the as many articles that span 3 columns on one row as
+  //fit on the screen
+  .article {
+    grid-column: span 3;
+  }
+}
+
+//create a small grid to go alongside the body
 .sidebar {
   @include grid-main;
   grid-area: 2 / 2 / 10 / 3;
@@ -231,27 +260,27 @@ gap: 2rem;
 //     display: inline-block;
 //     margin: 0;
 //   }
-  
+
 //   .cut-text-container {
 //     background-color: #fff;
 //     position: relative;
 //     z-index: 1;
 //     padding: 0px 50px;
-    
+
 //     animation: moveCutClip $dur $ease infinite alternate;
-    
+
 //     .cut-text {
 //       background-image: url(#{$imageURL});
 //       margin: 0;
 //     }
-    
+
 //     span {
 //       color: #000;
 //       mix-blend-mode: lighten;
 //       background-color: #0000ff;
 //     }
 //   }
-  
+
 //   .colored-text {
 //     color: #fff;
 //     position: absolute;
@@ -259,7 +288,7 @@ gap: 2rem;
 //     left: 0;
 //     width: 100%;
 //     animation: moveTopColoredClip $dur $ease infinite alternate;
-    
+
 //     &.second {
 //       top: 50%;
 //       animation: moveBottomColoredClip $dur $ease infinite alternate;
