@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/grid";
+
 //Set the main grid container for the page leaving the rows implicit
 //This container will end up having a header, body and footer grid inside of it
 .grid-container {
@@ -81,6 +87,7 @@ gap: 2rem;
 }
 
 //Set the section element to be the outer grid container for the body of the page
+//This is used on the index.html page only
 .section {
   @include grid-main;
   gap: 1rem;
@@ -97,6 +104,8 @@ gap: 2rem;
     grid-column: span 3;
   }
 }
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the images.html page only
 .section-images {
   @include grid-main;
   grid-area: 2 / 2 / 10 / 12;
@@ -139,7 +148,9 @@ gap: 2rem;
     grid-row: span 2;
   }
 }
+
 //Set the section element to be the outer grid container for the body of the page
+//This is used on the boot-grid.html page only
 .section-grid {
   @include grid-main;
   gap: 1rem;
