@@ -11,9 +11,9 @@
   </head>
 
 <body>
-  <div class="grid-container">
+  <div class="container-fluid">
     <main class="main">
-      <img class="header-img" src="images/lopez-island.jpg"
+      <img class="header-img img-fluid" src="images/lopez-island.jpg"
         alt="A view looking out toward the water from a tree filled and rocky island">
       <div class="flex-heading">
         <h1>Wanderlust a la Carte</h1>
@@ -22,32 +22,79 @@
 
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="index.html">The Beginning</a></li>
-          <li><a href="images.html">Images</a></li>
-          <li><a href="#">Grid</a></li>
-          <li><a href="accordian.html">Accordian</a></li>
-          <li>
+          <li class="nav-item"><a class="nav-link" href="index.html">The Beginning</a></li>
+          <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Grid</a></li>
+          <li class="nav-item"><a class="nav-link" href="accordian.html">Accordian</a></li>
+          <li class="nav-item">
               <span data-toggle="tooltip" title="Not working yet">
                   <a class="nav-link disabled" href="#">More and more</a>
               </span>
           </li>
         </ul>
-    </nav>
+      </nav>
     </main>
 
     <div class="container">
-  <div class="row">
-    <div class="col-6">
-      One of three columns
+      <div class="row justify-content-start">
+        <div class="col-4">
+          One of two columns
+        </div>
+        <div class="col-4">
+          One of two columns
+        </div>
+      </div>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        One of two columns
+      </div>
+      <div class="col-4">
+        One of two columns
+      </div>
     </div>
-    <div class="col-4">
-      One of three columns
+    <div class="row justify-content-end">
+      <div class="col-4">
+        One of two columns
+      </div>
+      <div class="col-4">
+        One of two columns
+      </div>
     </div>
-    <div class="col-2">
-      One of three columns
+    <div class="row justify-content-around">
+      <div class="col-4">
+        One of two columns
+      </div>
+      <div class="col-4">
+        One of two columns
+      </div>
+    </div>
+    <div class="row justify-content-between">
+      <div class="col-4">
+        One of two columns
+      </div>
+      <div class="col-4">
+        One of two columns
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="container">
+    <div class="row row-cols-1">
+      <img class="col-sm-3 img-thumbnail" src="images/The-beginning.jpg">
+      <p>How things all began! Isn't she lovely?</p>
+      <a href="#">read more >> </a>
+    </div>
+    <div class="row row-cols-1">
+      <img class="col-sm-3 img-thumbnail" src="images/windowless-sliding-door.jpg">
+      <p>You can see right through the door...</p>
+      <a href="#">read more >> </a>
+    </div>
+    <div class="row row-cols-1">
+      <img class="col-sm-3 img-thumbnail" src="images/floored.jpg">
+      <p>After seeing it, I'm floored</p>
+      <a href="#">read more >> </a>
+    </div>
+  </div>
 
 
     <footer class="footer">
