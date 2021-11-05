@@ -164,7 +164,9 @@ gap: 2rem;
     grid-column: span 3;
   }
 }
-
+.card:hover {
+  box-shadow: 0 0 10px black;
+}
 //create a small grid to go alongside the body
 .sidebar {
   @include grid-main;
