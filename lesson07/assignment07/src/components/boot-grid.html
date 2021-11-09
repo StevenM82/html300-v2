@@ -71,6 +71,30 @@
 </body>
 </html>
 
+
+<style>
+  /* Set the section element to be the outer grid container for the body of the page
+  This is used on the boot-grid.html page only */
+  .section-grid {
+    @include grid-main;
+    gap: 1rem;
+    grid-area: 2 / 3 / 10 / 12;
+
+    /* make the articles appear more centered on smaller screens */
+    @include media-query("mobile") {
+      grid-area: 2 / 2 / 10 / 12;
+    }
+
+    /* allow the grid to place the as many articles that span 3 columns on one row as
+    fit on the screen */
+    .article {
+      grid-column: span 3;
+    }
+  }
+  /* Set a black box-shadow around the card on hover */
+</style>
+
+
 <!-- This moves the heading up and down -->
     <!-- https://codepen.io/ZachSaucier/pen/RwVdEJO -->
     <!-- <main class="main" aria-label="You expect this pen to do one thing but it changed into something else. — Zach Saucier">
