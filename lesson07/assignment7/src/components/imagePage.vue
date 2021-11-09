@@ -58,3 +58,38 @@ a {
   color: #42b983;
 }
 </style>
+
+
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the images.html page only
+.section-images {
+  @include grid-main;
+  grid-area: 2 / 2 / 10 / 12;
+  //This gives grid dimensions for the nth-child of the images list
+  li:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  li:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 5;
+  }
+  li:nth-child(4) {
+    grid-row: span 2;
+  }
+  li:nth-child(6) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  li:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  li:nth-child(8) {
+    grid-column: span 2;
+  }
+  li:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
