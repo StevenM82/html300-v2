@@ -109,6 +109,18 @@
 </body>
 </html>
 
+
+<script>
+  export default {
+    data() {
+      return {
+          
+      }
+    }
+  }
+</script>
+
+
 <style>
   .card:hover {
     box-shadow: 0 0 10px black;
