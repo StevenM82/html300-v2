@@ -41,7 +41,7 @@ new Vue({
             {name: 'interior2', image: './assets/original-interior-2.jpg'},
             {name: 'floor', image: './assets/floor-removed.jpg'},
             {name: 'sliding-door', image: './assets/sliding-door-prep.jpg'},
-        ],
+        ]
+    },
     render: h => h(App)
-    }
 })
