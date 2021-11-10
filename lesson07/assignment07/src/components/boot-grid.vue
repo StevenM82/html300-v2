@@ -1,23 +1,5 @@
 <template>
   <div class="container-fluid">
-    <main class="main">
-      <img class="header-img img-fluid" src="images/lopez-island.jpg"
-        alt="A view looking out toward the water from a tree filled and rocky island">
-
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="index.html">The Beginning</a></li>
-          <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Grid</a></li>
-          <li class="nav-item"><a class="nav-link" href="accordian.html">Accordian</a></li>
-          <li class="nav-item">
-            <span data-toggle="tooltip" title="Not working yet">
-                <a class="nav-link disabled" href="#">More and more</a>
-            </span>
-          </li>
-        </ul>
-      </nav>
-    </main>
   
   <div class="container">
     <div class="row text-center">
@@ -45,13 +27,6 @@
     </div>
   </div>
 
-    <footer class="footer">
-      <ul class="footer-nav">
-        <li><a href="#">The Beginning</a></li>
-        <li><a href="#">So far, so good</a></li>
-        <li><a href="#">Mistakes and Advice</a></li>
-      </ul>
-    </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

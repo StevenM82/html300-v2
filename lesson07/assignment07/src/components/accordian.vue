@@ -1,28 +1,6 @@
 <template>
   <div class="grid-container">
-    <main class="main">
-      <img class="header-img" src="images/lopez-island.jpg"
-        alt="A view looking out toward the water from a tree filled and rocky island">
-      <div class="flex-heading">
-        <h1>Wanderlust a la Carte</h1>
-        <h2>Not lost, but finding</h2>
-      </div>
-
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html">The Beginning</a></li>
-          <li><a href="images.html">Images</a></li>
-          <li><a href="boot-grid.html">Grid</a></li>
-          <li><a href="#">Accordian</a></li>
-          <li>
-              <span data-toggle="tooltip" title="Not working yet">
-                  <a class="nav-link disabled" href="#">More and more</a>
-              </span>
-          </li>
-        </ul>
-      </nav>
-    </main>
-
+    
     <section class="section">
       <div id="accordion">
 
@@ -82,14 +60,7 @@
 
       </div>
     </section>
-
-    <footer class="footer">
-      <ul class="footer-nav">
-        <li><a href="#">The Beginning</a></li>
-        <li><a href="#">So far, so good</a></li>
-        <li><a href="#">Mistakes and Advice</a></li>
-      </ul>
-    </footer>
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

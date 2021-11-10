@@ -16,3 +16,13 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 createApp(App).mount('#app')
+
+//initialize the toggle function for the the entire site
+function () {
+    $('[data-toggle="tooltip"]').tooltip()
+}
+
+new Vue({
+    el: '#app',
+    render: h => h(App)
+})
