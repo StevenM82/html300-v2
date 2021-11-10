@@ -27,7 +27,7 @@ new Vue({
     render: h => h(App)
 })
 
-new imageList Vue({
+new Vue({
     el: '#listOfImages',
     data() {
         imagesNow = [
@@ -43,4 +43,5 @@ new imageList Vue({
             {name: 'sliding-door', image: './assets/sliding-door-prep.jpg'},
         ],
     render: h => h(App)
+    }
 })
