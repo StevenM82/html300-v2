@@ -72,29 +72,9 @@
 </script>
 
 
-<style>
+<style lang="scss">
   .card:hover {
     box-shadow: 0 0 10px black;
   }
 </style>
 
-
-<!-- This moves the heading up and down -->
-    <!-- https://codepen.io/ZachSaucier/pen/RwVdEJO -->
-    <!-- <main class="main" aria-label="You expect this pen to do one thing but it changed into something else. — Zach Saucier">
-      <blockquote cite="" aria-hidden>
-
-        <p class="colored-text">
-          <span>but finding</span>
-        </p>
-
-        <div class="cut-text-container">
-          <h1 class="cut-text"><span>Wanderlust</span></h1>
-          <h2 class="cut-text"><span>a la Carte</span></h2>
-        </div>
-
-        <p class="colored-text second">
-          <span>Not lost</span>
-        </p>
-      </blockquote>
-    </main> -->

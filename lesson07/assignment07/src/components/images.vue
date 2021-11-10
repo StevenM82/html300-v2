@@ -27,7 +27,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
 
 /* Set the section element to be the outer grid container for the body of the page
 This is used on the images.html page only */
