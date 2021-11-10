@@ -82,6 +82,11 @@ gap: 2rem;
   }
 }
 
+/* allow the grid to place the as many articles that span 3 columns on one row as
+fit on the screen */
+.article {
+  grid-column: span 3;
+}
 
 
 /* footer */
