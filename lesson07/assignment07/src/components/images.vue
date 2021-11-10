@@ -1,6 +1,4 @@
 <template>
-    <div class="grid-container">
-        
         <ul class="section-images">
             <li><img class="img-fluid" data-toggle="tooltip" data-placement="left" title="As delicious as it looks!"
                 src="images/camping-wings-veggies.jpg" alt="chicken wings and skewered veggies
@@ -15,11 +13,6 @@
             <li><img class="img-fluid" src="images/floor-removed.jpg"></li>
             <li><img class="img-fluid" src="images/sliding-door-prep.jpg"></li>
         </ul>
-        
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
 </template>
 
 <script>
