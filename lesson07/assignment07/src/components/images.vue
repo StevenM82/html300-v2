@@ -14,7 +14,7 @@
             //<li><img class="img-fluid" src="./assets/floor-removed.jpg"></li>
             //<li><img class="img-fluid" src="./assets/sliding-door-prep.jpg"></li>
         //</ul>
-        <ul>
+        <ul id="listOfImages">
             <li v-for="photo in imagesNow>
                 {{photo.image}}
             </li>
