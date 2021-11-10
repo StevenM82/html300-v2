@@ -3,15 +3,15 @@
             <li><img class="img-fluid" data-toggle="tooltip" data-placement="left" title="As delicious as it looks!"
                 src="images/camping-wings-veggies.jpg" alt="chicken wings and skewered veggies
                 cooking over a fire"></li>
-            <li><img class="img-fluid" src="images/the-market.jpg"></li>
-            <li><img class="img-fluid" src="images/tropical-forest.jpg"></li>
-            <li><img class="img-fluid" src="images/glacial-lake.jpg"></li>
-            <li><img class="img-fluid" src="images/festival-2019.jpg"></li>
-            <li><img class="img-fluid" src="images/los-muertos.jpg"></li>
-            <li><img class="img-fluid" src="images/original-interior.jpg"></li>
-            <li><img class="img-fluid" src="images/original-interior-2.jpg"></li>
-            <li><img class="img-fluid" src="images/floor-removed.jpg"></li>
-            <li><img class="img-fluid" src="images/sliding-door-prep.jpg"></li>
+            <li><img class="img-fluid" src="assets/the-market.jpg"></li>
+            <li><img class="img-fluid" src="assets/tropical-forest.jpg"></li>
+            <li><img class="img-fluid" src="assets/glacial-lake.jpg"></li>
+            <li><img class="img-fluid" src="assets/festival-2019.jpg"></li>
+            <li><img class="img-fluid" src="assets/los-muertos.jpg"></li>
+            <li><img class="img-fluid" src="assets/original-interior.jpg"></li>
+            <li><img class="img-fluid" src="assets/original-interior-2.jpg"></li>
+            <li><img class="img-fluid" src="assets/floor-removed.jpg"></li>
+            <li><img class="img-fluid" src="assets/sliding-door-prep.jpg"></li>
         </ul>
 </template>
 
@@ -61,23 +61,3 @@
     }
 </style>
 
-
-<!-- This moves the heading up and down -->
-    <!-- https://codepen.io/ZachSaucier/pen/RwVdEJO -->
-    <!-- <main class="main" aria-label="You expect this pen to do one thing but it changed into something else. — Zach Saucier">
-      <blockquote cite="" aria-hidden>
-
-        <p class="colored-text">
-          <span>but finding</span>
-        </p>
-
-        <div class="cut-text-container">
-          <h1 class="cut-text"><span>Wanderlust</span></h1>
-          <h2 class="cut-text"><span>a la Carte</span></h2>
-        </div>
-
-        <p class="colored-text second">
-          <span>Not lost</span>
-        </p>
-      </blockquote>
-    </main> -->
