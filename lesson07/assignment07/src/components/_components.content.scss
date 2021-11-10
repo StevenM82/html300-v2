@@ -130,6 +130,16 @@ gap: 2rem;
 .col-12 { width: 100%; }
 
 
+// Define variable defaults
+$body-bg: #000;
+$body-color: #111;
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+
+
 //https://polypane.app/css-3d-transform-examples/
 //3D Transform #8 by DocSpo
 
