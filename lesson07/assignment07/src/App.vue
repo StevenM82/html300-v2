@@ -1,6 +1,7 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
+  <div id="nav" class="nav">
+    <!--<router-link> acts like an <a> with the correct href -->
+    <router-link to="/">The Beginning</router-link> |
     <router-link to="/images">Images</router-link> |
     <router-link to="/accordian">Accordian</router-link> |
     <router-link to="/boot-grid">Boot-grid</router-link> 
