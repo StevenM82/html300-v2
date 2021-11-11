@@ -1,25 +1,26 @@
 <template>
     <div id="images">
-        <!-- <ul class="section-images text-decoration-none p-0">
-            <li><img class="img-fluid" data-toggle="tooltip" data-placement="left" title="As delicious as it looks!"
-                src="./assets/camping-wings-veggies.jpg" alt="chicken wings and skewered veggies
-                cooking over a fire"></li>
-            <li><img class="img-fluid" src="./assets/the-market.jpg"></li>
-            <li><img class="img-fluid" src="./assets/tropical-forest.jpg"></li>
-            <li><img class="img-fluid" src="./assets/glacial-lake.jpg"></li>
-            <li><img class="img-fluid" src="./assets/festival-2019.jpg"></li>
-            <li><img class="img-fluid" src="./assets/los-muertos.jpg"></li>
-            <li><img class="img-fluid" src="./assets/original-interior.jpg"></li>
-            <li><img class="img-fluid" src="./assets/original-interior-2.jpg"></li>
-            <li><img class="img-fluid" src="./assets/floor-removed.jpg"></li>
-            <li><img class="img-fluid" src="./assets/sliding-door-prep.jpg"></li>
-        </ul> -->
         <h1>Images</h1>
-        <ul id="listOfImages">
+        <ul class="section-images text-decoration-none p-0">
+            <li><img class="img-fluid" data-toggle="tooltip" data-placement="left" title="As delicious as it looks!"
+                src="/assets/camping-wings-veggies.jpg" alt="chicken wings and skewered veggies
+                cooking over a fire"></li>
+            <li><img class="img-fluid" src="/assets/the-market.jpg"></li>
+            <li><img class="img-fluid" src="/assets/tropical-forest.jpg"></li>
+            <li><img class="img-fluid" src="/assets/glacial-lake.jpg"></li>
+            <li><img class="img-fluid" src="/assets/festival-2019.jpg"></li>
+            <li><img class="img-fluid" src="/assets/los-muertos.jpg"></li>
+            <li><img class="img-fluid" src="/assets/original-interior.jpg"></li>
+            <li><img class="img-fluid" src="/assets/original-interior-2.jpg"></li>
+            <li><img class="img-fluid" src="/assets/floor-removed.jpg"></li>
+            <li><img class="img-fluid" src="/assets/sliding-door-prep.jpg"></li>
+        </ul>
+        
+        <!-- <ul id="listOfImages">
             <li v-for="photo in imagesNow">
                 {{photo.image}}
             </li>
-        </ul>
+        </ul> -->
     </div>
 </template>
 
@@ -28,10 +29,10 @@
     }
 </script>
 
-<style lang=" scss ">
+<style>
 
-<!-- Set the section element to be the outer grid container for the body of the page
-This is used on the images.html page only -->
+/* Set the section element to be the outer grid container for the body of the page
+This is used on the images.html page only */
 
 .section-images {
   --auto-grid-min-size: 16rem;
@@ -40,7 +41,7 @@ This is used on the images.html page only -->
   grid-area: 2 / 2 / 10 / 12;
   gap: 0.5rem;
   list-style: none;
-  
+}
   /* This gives grid dimensions for the nth-child of the images list */
   li:nth-child(1) {
       grid-column: span 2;
@@ -68,6 +69,6 @@ This is used on the images.html page only -->
       grid-column: span 2;
       grid-row: span 2;
   }
-}
+
 </style>
 
