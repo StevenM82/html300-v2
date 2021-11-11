@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import '/component/app.scss';
 
 // initialize the toggle function for the the entire site
 // function () {
