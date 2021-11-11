@@ -1,7 +1,4 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
   <section class="section">
       <article class="article">
         <img class="img-fluid" src="../assets/glacial-lake.jpg" alt="a calm glacial lake">
