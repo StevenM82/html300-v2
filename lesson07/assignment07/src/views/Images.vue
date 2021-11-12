@@ -1,7 +1,7 @@
 <template>
-    <div id="images">
+    <div>
         <h1>Images</h1>
-        <ul class="section-images text-decoration-none p-0">
+        <!-- <ul class="section-images text-decoration-none p-0">
             <li><img class="img-fluid" data-toggle="tooltip" data-placement="left" title="As delicious as it looks!"
                 src="../assets/camping-wings-veggies.jpg" alt="chicken wings and skewered veggies
                 cooking over a fire"></li>
@@ -14,19 +14,40 @@
             <li><img class="img-fluid" src="../assets/original-interior-2.jpg"></li>
             <li><img class="img-fluid" src="../assets/floor-removed.jpg"></li>
             <li><img class="img-fluid" src="../assets/sliding-door-prep.jpg"></li>
-        </ul>
-        
-        <!-- <ul id="listOfImages">
-            <li v-for="photo in imagesNow">
-                {{photo.image}}
-            </li>
         </ul> -->
+        
+        <ul>
+            <li v-for="image in imagesNow" :key="image">
+                {{ imagesNow.image }}
+            </li>
+        </ul>
+        <!-- <div v-for="image in imagesNow" :key="image">{{ imagesNow.image }}
+        </div> -->
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                let camping = '@/assets/camping-wings-veggies.jpg';
+                const imageArray = [camping]
+                imagesNow: [
+                    {name: 'camping', image: '@/assets/camping-wings-veggies.jpg'},
+                    {name: 'market', image: '../assets/the-market.jpg'},
+                    {name: 'forest', image: '../assets/tropical-forest.jpg'},
+                    {name: 'glacial', image: '../assets/glacial-lake.jpg'},
+                    {name: 'festival', image: '../assets/festival-2019.jpg'},
+                    {name: 'muertos', image: '../assets/los-muertos.jpg'},
+                    {name: 'interior', image: '../assets/original-interior.jpg'},
+                    {name: 'interior2', image: '../assets/original-interior-2.jpg'},
+                    {name: 'floor', image: '../assets/floor-removed.jpg'},
+                    {name: 'sliding-door', image: '../assets/sliding-door-prep.jpg'},
+                ]
+            }
+        }
     }
+
 </script>
 
 <style>
