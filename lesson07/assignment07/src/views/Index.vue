@@ -45,6 +45,7 @@
 
 <script>
   export default {
+    name: Index,
     data() {
       return {
           
@@ -63,12 +64,11 @@
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     gap: 1rem;
     grid-area: 2 / 3 / 10 / 12;
-
-    /* allow the grid to place the as many articles that span 3 columns on one row as
+  }
+  /* allow the grid to place the as many articles that span 3 columns on one row as
     fit on the screen */
-    .article {
-      grid-column: span 3;
-    }
+  .article {
+    grid-column: span 3;
   }
   /* create a small grid to go alongside the body */
   .sidebar {
@@ -77,13 +77,12 @@
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     grid-area: 2 / 2 / 10 / 3;
     row-gap: 2rem;
-
-    .sidebar-p {
-      margin: 0;
-    }
-    .sidebar-a {
-      text-decoration: none;
-    }
+  }
+  .sidebar-p {
+    margin: 0;
+  }
+  .sidebar-a {
+    text-decoration: none;
   }
 </style>
 
