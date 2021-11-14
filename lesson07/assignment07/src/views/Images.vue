@@ -20,7 +20,7 @@
             <li 
                 v-for="image in imagesNow" 
                 :image="image" 
-                :key="image"
+                :key="image.name"
             >
                 {{ imagesNow.image }}
             </li>
@@ -35,8 +35,6 @@
         name: Images,
         data() {
             return {
-                camping = '@/assets/camping-wings-veggies.jpg',
-                imageArray = [camping],
                 imagesNow: [
                     {name: 'camping', image: '@/assets/camping-wings-veggies.jpg'},
                     {name: 'market', image: '../assets/the-market.jpg'},
@@ -55,7 +53,7 @@
 
 </script>
 
-<style>
+<style lang="scss">
 /* Set the section element to be the outer grid container for the body of the page
 This is used on the images.html page only */
 .section-images {
