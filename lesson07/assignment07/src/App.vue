@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div id="nav" class="nav">
     <!--<router-link> acts like an <a> with the correct href -->
@@ -9,6 +10,28 @@
   <router-view/>
 </template>
 
+=======
+<script>
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
+
+<template>
+  <div id="app">
+    
+  </div>
+</template>
+
+
+
+>>>>>>> 7.0.1
 <style lang="scss">
 @import '@/assets/_app.scss';
 @import '@/assets/_grid.font.mixins.scss';

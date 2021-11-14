@@ -17,7 +17,11 @@
         </ul> -->
         
         <ul>
-            <li v-for="image in imagesNow" :key="image">
+            <li 
+                v-for="image in imagesNow" 
+                :image="image" 
+                :key="image"
+            >
                 {{ imagesNow.image }}
             </li>
         </ul>
@@ -28,10 +32,11 @@
 
 <script>
     export default {
+        name: Images,
         data() {
             return {
-                let camping = '@/assets/camping-wings-veggies.jpg';
-                const imageArray = [camping]
+                camping = '@/assets/camping-wings-veggies.jpg',
+                imageArray = [camping],
                 imagesNow: [
                     {name: 'camping', image: '@/assets/camping-wings-veggies.jpg'},
                     {name: 'market', image: '../assets/the-market.jpg'},

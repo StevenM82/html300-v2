@@ -28,6 +28,10 @@
 
 <script>
   export default {
+<<<<<<< HEAD
+=======
+    name: Boot-grid,
+>>>>>>> 7.0.1
     data() {
       return {
           

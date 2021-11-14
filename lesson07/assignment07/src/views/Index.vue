@@ -42,12 +42,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD:lesson07/assignment07/src/components/HelloWorld.vue
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-=======
   export default {
     name: Index,
     data() {
@@ -55,29 +49,10 @@ export default {
           
       }
     }
->>>>>>> 7.0.1:lesson07/assignment07/src/views/Index.vue
   }
-}
+
 </script>
 
-<<<<<<< HEAD:lesson07/assignment07/src/components/HelloWorld.vue
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-=======
 
 <style>
   /* Set the section element to be the outer grid container for the body of the page
@@ -108,5 +83,4 @@ a {
   .sidebar-a {
     text-decoration: none;
   }
->>>>>>> 7.0.1:lesson07/assignment07/src/views/Index.vue
 </style>
