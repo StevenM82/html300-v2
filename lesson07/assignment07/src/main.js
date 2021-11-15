@@ -8,12 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // import './app.scss'
-// import '../_components.content.scss'
+// import 'src/components/_components.content.scss'
 
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
 
 createApp(App).mount('#app')
 
@@ -21,7 +17,6 @@ createApp(App).mount('#app')
 // function () {
 //     $('[data-toggle="tooltip"]').tooltip()
 // }
-
 
 
 createApp(App).use(router).mount('#app')
