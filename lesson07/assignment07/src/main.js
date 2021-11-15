@@ -7,8 +7,8 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import './app.scss'
-import '../_components.content.scss'
+// import './app.scss'
+// import '../_components.content.scss'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)

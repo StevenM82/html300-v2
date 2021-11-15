@@ -12,6 +12,7 @@
 <style lang="scss">
 @import '@/assets/_app.scss';
 @import '@/assets/_grid.font.mixins.scss';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
