@@ -1,6 +1,15 @@
 <template>
   <div id="app">
-    <nav class="nav">
+    <div class="grid-container">
+      <main class="main">
+        <img class="header-img" src="/src/assets/lopez-island.jpg"
+          alt="A view looking out toward the water from a tree filled and rocky island">
+        <div class="flex-heading">
+          <h1>Wanderlust a la Carte</h1>
+          <h2>Not lost, but finding</h2>
+        </div>
+      </main>
+      <nav class="nav">
         <ul class="nav-list">
           <!--<router-link> acts like an <a> with the correct href -->
           <li><router-link to="/">The Beginning</router-link></li>
@@ -14,15 +23,17 @@
           </li>
         </ul>
       </nav>
+    </div>
   </div>
   <!-- <router-view/> -->
 </template>
 
 <style lang="scss">
-@import '@/assets/_settings.variable.scss';
-@import '@/assets/_grid.font.mixins.scss';
-@import '@/assets/_app.scss';
-// @import '@/components/_components.contents.scss';
+@import 'css/normalize';
+@import 'css/settings.variables';
+@import 'css/settings.responsive';
+@import 'css/grid.font.mixins';
+@import 'css/components.content';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -32,10 +43,12 @@
   color: #2c3e50;
 }
 
-#nav {
+
   // place the nav at the bottom of the header, on top of the header image
+  .nav {
   grid-area: 12 / 1 / 12 / span 12;
-  color: white;
+  color: $white;
+  }
   .nav-list {
     display: flex;
     flex-wrap: wrap;
@@ -46,24 +59,19 @@
   // Hover transition:
   //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
   a {
-    color: white;
+    color: $white;
     text-decoration: none;
     padding: 0 2rem;
     transition: .5s all ease-in-out;
   }
   //ease in and change the text and background color and add a border
   a:hover {
-    color: yellow;
+    color: $neon-yellow;
     box-shadow: 0 0 5px yellow;
     text-shadow: 0 0 5px yellow;
     background-color: rgb(63, 63, 63);
     border-radius: 3rem;
     font-size: 2rem;
-  }
-  
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
 
 
