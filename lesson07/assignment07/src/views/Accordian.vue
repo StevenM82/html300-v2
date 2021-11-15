@@ -63,7 +63,7 @@
 
 <script>
   export default {
-    name: Accordian,
+    name: 'Accordian',
     data() {
       return {
           

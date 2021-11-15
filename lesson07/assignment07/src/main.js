@@ -4,6 +4,12 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import router from './router'
 import Vue from 'vue'
+
+new Vue({
+    el: '#app',
+    render: h => h(App)
+})
+
 // import 'src/components/_components.content.scss'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)

@@ -25,14 +25,12 @@
                 {{ imagesNow.image }}
             </li>
         </ul>
-        <!-- <div v-for="image in imagesNow" :key="image">{{ imagesNow.image }}
-        </div> -->
     </div>
 </template>
 
 <script>
     export default {
-        name: Images,
+        name: 'Images',
         data() {
             return {
                 imagesNow: [
@@ -50,7 +48,6 @@
             }
         }
     }
-
 </script>
 
 <style lang="scss">

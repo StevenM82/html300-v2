@@ -1,47 +1,48 @@
-// * {
-//     box-sizing: border-box;
-//     padding:0;
-//     list-style: none;
-//   }
+* {
+    box-sizing: border-box;
+    padding:0;
+    list-style: none;
+  }
     
-//   //Set the main grid container for the page leaving the rows implicit
-//   //This container will end up having a header, body and footer grid inside of it
-//   .grid-container {
-//   display: grid;
-//   grid-template-columns: repeat(12, 1fr);
-//   gap: 2rem;
+  //Set the main grid container for the page leaving the rows implicit
+  //This container will end up having a header, body and footer grid inside of it
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
   
-//     //Set a header grid that only covers one row of the page grid container, but
-//     //spans the entire width of the page
-//     .main {
-//       display: grid;
-//       grid-area: 1 / 1 / 2 / span 12;
-//     }
-//     .header-img {
-//       grid-area: 1 / 1 / span 12 / span 12;
-//       height: 50vh;
-//       width: 100%;
-//     }
-//     //Set the flexbox inside the header to span the entire width to allow more
-//     //options for placement of the h1 and h2 elements
-//     .flex-heading {
-//       display: flex;
-//       flex-direction: column;
-//       grid-area: 2 / 1 / 2 / span 12;
-//       justify-content: flex-end;
-//       h1 {
-//         @include h1-h2_font;
-//         grid-area: 1 / 1 / 2 / span 12;
-//         font-size: 3rem;
-//         margin: 0;
-//       }
-//       h2 {
-//         @include h1-h2_font;
-//         grid-area: 2 / 2 / 2 / 12;
-//         font-size: 2rem;
-//         margin: 0;
-//       }
-//     }
+    //Set a header grid that only covers one row of the page grid container, but
+    //spans the entire width of the page
+    .main {
+      display: grid;
+      grid-area: 1 / 1 / 2 / span 12;
+    }
+    .header-img {
+      grid-area: 1 / 1 / span 12 / span 12;
+      height: 50vh;
+      width: 100%;
+    }
+    //Set the flexbox inside the header to span the entire width to allow more
+    //options for placement of the h1 and h2 elements
+    .flex-heading {
+      display: flex;
+      flex-direction: column;
+      grid-area: 2 / 1 / 2 / span 12;
+      justify-content: flex-end;
+      h1 {
+        @include h1-h2_font;
+        grid-area: 1 / 1 / 2 / span 12;
+        font-size: 3rem;
+        margin: 0;
+      }
+      h2 {
+        @include h1-h2_font;
+        grid-area: 2 / 2 / 2 / 12;
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+}
 //     .nav {
 //       //place the nav at the bottom of the header, on top of the header image
 //       grid-area: 12 / 1 / 12 / span 12;

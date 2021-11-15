@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    name: Boot-grid,
+    name: 'Boot-grid',
     data() {
       return {
           
