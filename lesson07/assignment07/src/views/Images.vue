@@ -17,7 +17,7 @@
         </ul> -->
         
             <img 
-                v-for="image in imagesNow" 
+                v-for="image in images" 
                 :src="image.url" 
                 :key="image.name"
             >
@@ -29,7 +29,7 @@
         name: 'Images',
         data() {
             return {
-                imagesNow: [
+                images: [
                     {name: 'camping', url: '@/assets/camping-wings-veggies.jpg'},
                     {name: 'market', url: '../assets/the-market.jpg'},
                     {name: 'forest', url: '../assets/tropical-forest.jpg'},
