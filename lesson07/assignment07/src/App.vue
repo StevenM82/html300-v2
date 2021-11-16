@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="grid-container">
+    <!-- <div class="grid-container">
       <main class="main">
         <img class="header-img" src="/src/assets/lopez-island.jpg"
           alt="A view looking out toward the water from a tree filled and rocky island">
@@ -8,7 +8,7 @@
           <h1>Wanderlust a la Carte</h1>
           <h2>Not lost, but finding</h2>
         </div>
-      </main>
+      </main> -->
       <nav class="nav">
         <ul class="nav-list">
           <!--<router-link> acts like an <a> with the correct href -->
@@ -24,7 +24,7 @@
         </ul>
       </nav>
     </div>
-  </div>
+  <!-- </div> -->
   <!-- <router-view/> -->
 </template>
 
