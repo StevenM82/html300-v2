@@ -5,7 +5,7 @@
 //     css: {
 //       loaderOptions: {
 //         sass: {
-//           data: `@import "@/components/_components.content.scss";`
+//           additionalData: `@import "@/components/_components.content.scss";`
 //         }
 //       }
 //     }

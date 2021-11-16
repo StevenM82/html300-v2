@@ -58,12 +58,11 @@
   //ease in and change the text and background color and add a border
   a:hover {
     color: $neon-yellow;
-    box-shadow: 0 0 5px yellow;
-    text-shadow: 0 0 5px yellow;
+    box-shadow: 0 0 5px $neon-yellow;
+    text-shadow: 0 0 5px $neon-yellow;
     background-color: rgb(63, 63, 63);
     border-radius: 3rem;
     font-size: 2rem;
   }
-
 
 </style>
