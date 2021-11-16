@@ -64,5 +64,4 @@
     border-radius: 3rem;
     font-size: 2rem;
   }
-
 </style>
