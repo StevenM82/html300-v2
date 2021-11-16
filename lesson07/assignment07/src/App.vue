@@ -35,15 +35,6 @@
 @import 'css/grid.font.mixins';
 @import 'css/components.content';
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-
   // place the nav at the bottom of the header, on top of the header image
   .nav {
   grid-area: 12 / 1 / 12 / span 12;

@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Vue from 'vue'
 
 new Vue({
     el: '#app',

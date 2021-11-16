@@ -16,15 +16,11 @@
             <li><img class="img-fluid" src="../assets/sliding-door-prep.jpg"></li>
         </ul> -->
         
-        <ul>
-            <li 
+            <img 
                 v-for="image in imagesNow" 
-                :image="image" 
+                :src="image.url" 
                 :key="image.name"
             >
-                {{ imagesNow.image }}
-            </li>
-        </ul>
     </div>
 </template>
 
@@ -34,16 +30,16 @@
         data() {
             return {
                 imagesNow: [
-                    {name: 'camping', image: '@/assets/camping-wings-veggies.jpg'},
-                    {name: 'market', image: '../assets/the-market.jpg'},
-                    {name: 'forest', image: '../assets/tropical-forest.jpg'},
-                    {name: 'glacial', image: '../assets/glacial-lake.jpg'},
-                    {name: 'festival', image: '../assets/festival-2019.jpg'},
-                    {name: 'muertos', image: '../assets/los-muertos.jpg'},
-                    {name: 'interior', image: '../assets/original-interior.jpg'},
-                    {name: 'interior2', image: '../assets/original-interior-2.jpg'},
-                    {name: 'floor', image: '../assets/floor-removed.jpg'},
-                    {name: 'sliding-door', image: '../assets/sliding-door-prep.jpg'},
+                    {name: 'camping', url: '@/assets/camping-wings-veggies.jpg'},
+                    {name: 'market', url: '../assets/the-market.jpg'},
+                    {name: 'forest', url: '../assets/tropical-forest.jpg'},
+                    {name: 'glacial', url: '../assets/glacial-lake.jpg'},
+                    {name: 'festival', url: '../assets/festival-2019.jpg'},
+                    {name: 'muertos', url: '../assets/los-muertos.jpg'},
+                    {name: 'interior', url: '../assets/original-interior.jpg'},
+                    {name: 'interior2', url: '../assets/original-interior-2.jpg'},
+                    {name: 'floor', url: '../assets/floor-removed.jpg'},
+                    {name: 'sliding-door', url: '../assets/sliding-door-prep.jpg'},
                 ]
             }
         }
