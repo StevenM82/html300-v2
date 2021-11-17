@@ -3,6 +3,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 import Vue from 'vue'
 import App from './App.vue'
+import Header from './views/Header'
 import Home from '/Home'
 import Images from './views/Images'
 import Accordian from './views/Accordian'
@@ -21,6 +22,7 @@ Vue.use(IconsPlugin)
 
 // createApp(App).mount('#app')
 createApp(App).use(router).mount('#app')
+createApp(Header).use(router).mount('#header')
 createApp(Home).use(router).mount('#home')
 createApp(Images).use(router).mount('#images')
 createApp(Accordian).use(router).mount('#accordian')
