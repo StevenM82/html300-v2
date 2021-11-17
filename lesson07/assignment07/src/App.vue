@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <div class="grid-container">
-      <!-- <main class="main">
-        <img class="header-img" src="/src/assets/lopez-island.jpg"
-          alt="A view looking out toward the water from a tree filled and rocky island">
+      <main class="main">
+        <v-img class="header-img" src="src/assets/lopez-island.jpg"
+          alt="A view looking out toward the water from a tree filled and rocky island"></v-img>
         <div class="flex-heading">
           <h1>Wanderlust a la Carte</h1>
           <h2>Not lost, but finding</h2>
         </div>
       </main>
-      <nav class="nav">
+      <!-- <nav class="nav">
         <ul class="nav-list">
           <router-link> acts like an <a> with the correct href
           <li><router-link to="/">The Beginning</router-link></li>
@@ -27,6 +27,15 @@
   </div>
   <!-- <router-view/> -->
 </template>
+
+<script>
+  export default {
+    name: 'app',
+    data () {
+      return {}
+    }
+  }
+</script>
 
 <style lang="scss">
 @import 'css/normalize';

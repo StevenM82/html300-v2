@@ -23,37 +23,42 @@
     </nav> -->
 </template>
 
-<script>
-</script>
+// <script>
+// </script>
 
-<style lang="scss">
-    // place the nav at the bottom of the header, on top of the header image
-  .nav {
-  grid-area: 12 / 1 / 12 / span 12;
-  color: $white;
-  }
-  .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size: 1.5rem;
-  }
+// <style lang="scss">
+// @import 'css/normalize';
+// @import 'css/settings.variables';
+// @import 'css/settings.responsive';
+// @import 'css/grid.font.mixins';
+// @import 'css/components.content';
+//     // place the nav at the bottom of the header, on top of the header image
+//   .nav {
+//   grid-area: 12 / 1 / 12 / span 12;
+//   color: $white;
+//   }
+//   .nav-list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-evenly;
+//     font-size: 1.5rem;
+//   }
 
-  // Hover transition:
-  //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
-  a {
-    color: $white;
-    text-decoration: none;
-    padding: 0 2rem;
-    transition: .5s all ease-in-out;
-  }
-  //ease in and change the text and background color and add a border
-  a:hover {
-    color: $neon-yellow;
-    box-shadow: 0 0 5px $neon-yellow;
-    text-shadow: 0 0 5px $neon-yellow;
-    background-color: rgb(63, 63, 63);
-    border-radius: 3rem;
-    font-size: 2rem;
-  }
-</style>
+//   // Hover transition:
+//   //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//     padding: 0 2rem;
+//     transition: .5s all ease-in-out;
+//   }
+//   //ease in and change the text and background color and add a border
+//   a:hover {
+//     color: $neon-yellow;
+//     box-shadow: 0 0 5px $neon-yellow;
+//     text-shadow: 0 0 5px $neon-yellow;
+//     background-color: rgb(63, 63, 63);
+//     border-radius: 3rem;
+//     font-size: 2rem;
+//   }
+// </style>
