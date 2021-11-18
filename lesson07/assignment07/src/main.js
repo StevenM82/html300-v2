@@ -29,8 +29,16 @@ createApp(Accordian).use(router).mount('#accordian')
 createApp(Bootgrid).use(router).mount('#boot-grid')
 
 
+// const app = Vue.createApp({
+//     data() {
+//         return {
+//             product: 'Socks',
+//             image: './assets/images/socks_green.jpg',
+//             // solution
+//             url: 'https://www.vuemastery.com/'
+//             // solution
+//         }
+//     }
+// })
 
-//initialize the toggle function for the the entire site
-// function () {
-//     $('[data-toggle="tooltip"]').tooltip()
-// }
+

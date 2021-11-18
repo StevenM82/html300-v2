@@ -16,11 +16,14 @@
             <li><img class="img-fluid" src="../assets/sliding-door-prep.jpg"></li>
         </ul> -->
         
-            <img 
+            <ul>
+                <li 
                 v-for="image in images" 
                 :src="image.url" 
                 :key="image.name"
-            >
+                > {{ image }}
+                </li>
+            </ul>
     </div>
 </template>
 

@@ -55,18 +55,17 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
 
-
 <script>
   export default {
     name: 'Accordian',
+    //use v-if/v-else or v-show on the accordian to expand and collapse
     data() {
       return {
-          
+          isCollapsed: true
       }
     }
   }
