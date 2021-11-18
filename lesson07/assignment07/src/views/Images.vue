@@ -4,7 +4,7 @@
         v-for="image in images" 
         :src="image.url" 
         :key="image.name"
-        > {{ image.url }}
+        ><img {{ image.url }}>
         </li>
     </ul>
 </template>
@@ -25,7 +25,7 @@
                     {name: 'interior2', url: '../assets/original-interior-2.jpg'},
                     {name: 'floor', url: '../assets/floor-removed.jpg'},
                     {name: 'sliding-door', url: '../assets/sliding-door-prep.jpg'},
-                ]
+                ],
             }
         }
     }
