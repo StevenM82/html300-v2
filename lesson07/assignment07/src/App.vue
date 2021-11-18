@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <main class="main">
-      <img class="header-img" src="src/assets/lopez-island.jpg"
+      <img class="header-img" src="@/assets/lopez-island.jpg"
         alt="A view looking out toward the water from a tree filled and rocky island">
       <div class="flex-heading">
         <h1>Wanderlust a la Carte</h1>
