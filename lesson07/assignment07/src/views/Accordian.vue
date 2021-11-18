@@ -57,6 +57,8 @@
       </div>
     </div>
   </section>
+  <!-- make the images and their text an object so they can be iterated over
+  use v-if/v-else to make the cards get progressively smaller, but only until a certain point  -->
 </template>
 
 <script>
@@ -77,4 +79,3 @@
     box-shadow: 0 0 10px black;
   }
 </style>
-
