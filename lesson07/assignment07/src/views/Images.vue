@@ -1,10 +1,9 @@
 <template>
     <ul class="section-images">
         <li 
-        v-for="image in images" 
-        :src="image.url" 
-        :key="image.name"
-        ><img {{ image.url }}>
+            v-for="image in images" 
+            :key="image.name"
+            ><img class="img-fluid" :src="image.url">
         </li>
     </ul>
 </template>
@@ -15,7 +14,7 @@
         data() {
             return {
                 images: [
-                    {name: 'camping', url: '@/assets/camping-wings-veggies.jpg'},
+                    {name: 'camping', url: '../assets/camping-wings-veggies.jpg'},
                     {name: 'market', url: '../assets/the-market.jpg'},
                     {name: 'forest', url: '../assets/tropical-forest.jpg'},
                     {name: 'glacial', url: '../assets/glacial-lake.jpg'},
