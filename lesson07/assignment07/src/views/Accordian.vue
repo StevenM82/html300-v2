@@ -25,6 +25,7 @@
       </div>
     </div>
   </section>
+  
 </template>
 
   <!-- make the images and their text an object so they can be iterated over
@@ -52,9 +53,9 @@
   }
 </script>
 
-
 <style lang="scss">
   .card:hover {
+    transition: .5s all ease-in-out;
     box-shadow: 0 0 10px black;
   }
 </style>
