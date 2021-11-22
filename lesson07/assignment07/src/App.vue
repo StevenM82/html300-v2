@@ -1,4 +1,5 @@
 <template>
+<!-- set the header, nav and footer in this template for the entire website -->
   <div class="grid-container">
     <main class="main">
       <img class="header-img" src="@/assets/lopez-island.jpg"
@@ -23,7 +24,6 @@
     </nav>
     </main>
     <router-view/>
-
     <footer class="footer">
       <ul class="footer-nav">
         <li><a href="#">The Beginning</a></li>
@@ -44,6 +44,7 @@
 </script>
 
 <style lang="scss">
+// import all of the scss partials globally into the website
 @import './css/normalize';
 @import './css/settings.variables';
 @import './css/settings.responsive';

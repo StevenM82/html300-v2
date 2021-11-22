@@ -28,12 +28,7 @@
 
 <script>
   export default {
-    name: 'Boot-grid',
-    data() {
-      return {
-          
-      }
-    }
+    name: 'Boot-grid'
   }
 </script>
 

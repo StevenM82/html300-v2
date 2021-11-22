@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
+//set all of the urls and attach all of the other .vue files here 
 const routes = [
   {
     path: '/',

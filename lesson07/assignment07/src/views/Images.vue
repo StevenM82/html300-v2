@@ -1,5 +1,7 @@
 <template>
     <ul class="section-images">
+        <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
+        <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
         <li 
             v-for="image in images" 
             :key="image.name"
@@ -12,6 +14,8 @@
     export default {
         name: 'Images',
         data() {
+            // you have to place the image url inside require() to get it to show from the array 
+            // otherwise it will just show the url and not load the image
             return {
                 images: [
                     {name: 'camping', url: require('@/assets/camping-wings-veggies.jpg')},
@@ -29,6 +33,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-</style>
