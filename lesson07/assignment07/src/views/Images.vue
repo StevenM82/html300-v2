@@ -14,18 +14,21 @@
         data() {
             return {
                 images: [
-                    {name: 'camping', url: '@/assets/camping-wings-veggies.jpg'},
-                    {name: 'market', url: '../assets/the-market.jpg'},
-                    {name: 'forest', url: '../assets/tropical-forest.jpg'},
-                    {name: 'glacial', url: '../assets/glacial-lake.jpg'},
-                    {name: 'festival', url: '../assets/festival-2019.jpg'},
-                    {name: 'muertos', url: '../assets/los-muertos.jpg'},
-                    {name: 'interior', url: '../assets/original-interior.jpg'},
-                    {name: 'interior2', url: '../assets/original-interior-2.jpg'},
-                    {name: 'floor', url: '../assets/floor-removed.jpg'},
-                    {name: 'sliding-door', url: '../assets/sliding-door-prep.jpg'},
+                    {name: 'camping', url: require('@/assets/camping-wings-veggies.jpg')},
+                    {name: 'market', url: require('../assets/the-market.jpg')},
+                    {name: 'forest', url: require('../assets/tropical-forest.jpg')},
+                    {name: 'glacial', url: require('../assets/glacial-lake.jpg')},
+                    {name: 'festival', url: require('../assets/festival-2019.jpg')},
+                    {name: 'muertos', url: require('../assets/los-muertos.jpg')},
+                    {name: 'interior', url: require('../assets/original-interior.jpg')},
+                    {name: 'interior2', url: require('../assets/original-interior-2.jpg')},
+                    {name: 'floor', url: require('../assets/floor-removed.jpg')},
+                    {name: 'sliding-door', url: require('../assets/sliding-door-prep.jpg')},
                 ],
             }
         }
     }
 </script>
+
+<style lang="scss">
+</style>
