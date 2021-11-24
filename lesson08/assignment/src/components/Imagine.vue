@@ -1,6 +1,14 @@
+<template>
+    <li>
+        <img class="img-fluid">{{ image.src }}
+    </li>
+</template>
+
 <script>
 export default {
-    name: 'imageComponent', 
+    name: 'Imagine',    
+}
+images.component('Imagine', {
     props: {
         src: {
             type: String,
@@ -14,15 +22,9 @@ export default {
             type: String,
             required: false,
         }
-    }  
-}
+    }
+})
 </script>
 
-<template>
-    <li><img {{image.url}} ></li>
-</template>
-
-
 <style lang="scss">
-
 </style>
