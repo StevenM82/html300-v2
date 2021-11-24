@@ -1,17 +1,26 @@
 <template>
     <li>
-        <img class="img-fluid">{{ image.src }}
+        <img @click="toggleBorder()" class="img-fluid">{{ image.src }}
     </li>
 </template>
 
+
 <script>
 export default {
-    name: 'imagesComponent',
-    methods: {
+    name: 'ImagesComponent',
 
+    //creating the toggle mixin here
+    data: () => ({
+        isToggled = false,
+    }),
+    methods: {
+        toggleBorder() {
+            isToggled = !isToggled
+        }
     }  
 }
-images.component('Imagine', {
+
+images.component('my-image', {
     props: {
         src: {
             type: String,
@@ -27,9 +36,10 @@ images.component('Imagine', {
         }
     }
 })
-
-
 </script>
 
 <style lang="scss">
+    .border {
+        border: 1px black solid;
+    }
 </style>
