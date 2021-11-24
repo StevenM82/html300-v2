@@ -2,21 +2,21 @@
     <ul class="section-images">
         <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
         <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
-        <imagine 
+        <imagesComponent 
             v-for="image in images" 
             :key="image.name"
             >
-        </imagine>
+        </imagesComponent>
     </ul>
 </template>
 
 <script>
-    import Imagine from './src/components/Imagine.vue'
+    import imagesComponent from './src/components/imagesComponent.vue'
 
     export default {
         name: 'Images',
         components: {
-            Imagine,
+            imagesComponent,
         },
         data() {
             // you have to place the image url inside require() to get it to show from the array 

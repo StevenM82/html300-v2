@@ -6,7 +6,10 @@
 
 <script>
 export default {
-    name: 'Imagine',    
+    name: 'imagesComponent',
+    methods: {
+
+    }  
 }
 images.component('Imagine', {
     props: {
@@ -24,6 +27,8 @@ images.component('Imagine', {
         }
     }
 })
+
+
 </script>
 
 <style lang="scss">
