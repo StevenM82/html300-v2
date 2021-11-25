@@ -1,13 +1,322 @@
-html {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  padding:0;
+  list-style: none;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//Set the main grid container for the page leaving the rows implicit
+//This container will end up having a header, body and footer grid inside of it
+.grid-container {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+gap: 2rem;
+
+  //Set a header grid that only covers one row of the page grid container, but
+  //spans the entire width of the page
+  .main {
+    display: grid;
+    grid-area: 1 / 1 / 2 / span 12;
+  }
+  .header-img {
+    grid-area: 1 / 1 / span 12 / span 12;
+    height: 50vh;
+    width: 100%;
+  }
+  //Set the flexbox inside the header to span the entire width to allow more
+  //options for placement of the h1 and h2 elements
+  .flex-heading {
+    display: flex;
+    flex-direction: column;
+    grid-area: 2 / 1 / 2 / span 12;
+    justify-content: flex-end;
+    h1 {
+      @include h1-h2_font;
+      grid-area: 1 / 1 / 2 / span 12;
+      font-size: 3rem;
+      margin: 0;
+    }
+    h2 {
+      @include h1-h2_font;
+      grid-area: 2 / 2 / 2 / 12;
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+  .nav {
+    //place the nav at the bottom of the header, on top of the header image
+    grid-area: 12 / 1 / 12 / span 12;
+    color: $white;
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      font-size: 1.5rem;
+
+      @include media-query("mobile") {
+        //set flex direction to column on smaller screens to maintain readability of the menu
+        flex-direction: column;
+        gap: 1rem;
+        padding: .5rem 0;
+        font-size: 1.25rem;
+      }
+    }
+    //Hover transition:
+    //https://codepen.io/dig-lopes/pen/WLVGda?editors=1100
+    a {
+      color: $white;
+      text-decoration: none;
+      padding: 0 2rem;
+      transition: .5s all ease-in-out;
+    }
+    //ease in and change the text and background color and add a border
+    a:hover {
+      color: $neon-yellow;
+      box-shadow: 0 0 5px $neon-yellow;
+      text-shadow: 0 0 5px $neon-yellow;
+      background-color: rgb(63, 63, 63);
+      border-radius: 3rem;
+      font-size: 2rem;
+    }
+  }
+}
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the index.html page only
+.section {
+  @include grid-main;
+  gap: 1rem;
+  grid-area: 2 / 3 / 10 / 12;
+
+  //make the articles appear more centered on smaller screens
+  @include media-query("mobile") {
+    grid-area: 2 / 2 / 10 / 12;
+  }
+
+  //allow the grid to place the as many articles that span 3 columns on one row as
+  //fit on the screen
+  .article {
+    grid-column: span 3;
+  }
+}
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the images.html page only
+.section-images {
+  @include grid-main;
+  grid-area: 2 / 2 / 10 / 12;
+  //This gives grid dimensions for the nth-child of the images list
+  li:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  li:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 5;
+  }
+  li:nth-child(4) {
+    grid-row: span 2;
+  }
+  li:nth-child(6) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  li:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  li:nth-child(8) {
+    grid-column: span 2;
+  }
+  li:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
 
-.main {
-    padding: 2rem;
+//Set the section element to be the outer grid container for the body of the page
+//This is used on the boot-grid.html page only
+.section-grid {
+  @include grid-main;
+  gap: 1rem;
+  grid-area: 2 / 3 / 10 / 12;
+
+  //make the articles appear more centered on smaller screens
+  @include media-query("mobile") {
+    grid-area: 2 / 2 / 10 / 12;
+  }
+
+  //allow the grid to place the as many articles that span 3 columns on one row as
+  //fit on the screen
+  .article {
+    grid-column: span 3;
+  }
 }
+//Set a black box-shadow around the card on hover
+.card:hover {
+  box-shadow: 0 0 10px black;
+}
+//create a small grid to go alongside the body
+.sidebar {
+  @include grid-main;
+  grid-area: 2 / 2 / 10 / 3;
+  row-gap: 2rem;
+
+  //make the sidebar disappear when the screen gets too small
+  @include media-query("mobile") {
+    display: none;
+  }
+  .sidebar-p {
+    margin: 0;
+  }
+  .sidebar-a {
+    text-decoration: none;
+  }
+}
+
+//create a grid to hold all of the footer components
+.footer {
+  @include grid-main;
+  grid-area: 11 / 1 / 12 / span 12;
+  background-color: $blue;
+
+  //set the footer image to cover the footer
+  .footer-img {
+    grid-area: 1 / 1 /  12 / span 12;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: 1 / 1 /  12 / span 12;
+    justify-content: space-evenly;
+
+    //stack the nav in a column instead of a row on smaller screens for readability
+    @include media-query("mobile") {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+  }
+}
+
+/*Column widths*/
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 64.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+
+//https://polypane.app/css-3d-transform-examples/
+//3D Transform #8 by DocSpo
+
+// div {
+//     transform:
+//       perspective(750px)
+//       translate3d(0px, 0px, -250px)
+//       rotateX(27deg)
+//       scale(0.9, 0.9);
+//     border-radius: 20px;
+//     border: 5px solid #e6e6e6;
+//     box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+//     transition: 0.4s ease-in-out transform;
+
+//     &:hover {
+//       transform: translate3d(0px, 0px, -250px);
+//     }
+//   }
+
+//This one moves a text background bar up and down, changing the visible text
+//https://codepen.io/ZachSaucier/pen/RwVdEJO
+
+// html, body {
+//   height: 100%;
+//   background-image: url('images/lopez-island.jpg');
+// }
+//   blockquote {
+//     grid-area: 1 / 1 / 1 / span 12;
+//     position: relative;
+//     display: inline-block;
+//     margin: 0;
+//   }
+
+//   .cut-text-container {
+//     background-color: #fff;
+//     position: relative;
+//     z-index: 1;
+//     padding: 0px 50px;
+
+//     animation: moveCutClip $dur $ease infinite alternate;
+
+//     .cut-text {
+//       background-image: url(#{$imageURL});
+//       margin: 0;
+//     }
+
+//     span {
+//       color: #000;
+//       mix-blend-mode: lighten;
+//       background-color: #0000ff;
+//     }
+//   }
+
+//   .colored-text {
+//     color: #fff;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     animation: moveTopColoredClip $dur $ease infinite alternate;
+
+//     &.second {
+//       top: 50%;
+//       animation: moveBottomColoredClip $dur $ease infinite alternate;
+//     }
+//   }
+
+// @keyframes moveCutClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
+
+// @keyframes moveTopColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+// }
+
+// @keyframes moveBottomColoredClip {
+//   0%, 25% {
+//     clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+//   }
+//   75%, 100% {
+//     clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
+//   }
+// }
+
+// @keyframes fadeInAuthor {
+//   0%, 25% {
+//     opacity: 0;
+//   }
+//   75%, 100% {
+//     opacity: 1;
+//   }
+// }
