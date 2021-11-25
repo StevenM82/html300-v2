@@ -23,16 +23,16 @@
             // otherwise it will just show the url and not load the image
             return {
                 images: [
-                    {name: 'camping', src: require('@/assets/camping-wings-veggies.jpg')},
-                    {name: 'market', src: require('@/assets/the-market.jpg')},
-                    {name: 'forest', src: require('@/assets/tropical-forest.jpg')},
-                    {name: 'glacial', src: require('@/assets/glacial-lake.jpg')},
-                    {name: 'festival', src: require('@/assets/festival-2019.jpg')},
-                    {name: 'muertos', src: require('@/assets/los-muertos.jpg')},
-                    {name: 'interior', src: require('@/assets/original-interior.jpg')},
-                    {name: 'interior2', src: require('@/assets/original-interior-2.jpg')},
-                    {name: 'floor', src: require('@/assets/floor-removed.jpg')},
-                    {name: 'sliding-door', src: require('@/assets/sliding-door-prep.jpg')}
+                    {title: 'camping', src: require('@/assets/camping-wings-veggies.jpg')},
+                    {title: 'market', src: require('@/assets/the-market.jpg')},
+                    {title: 'forest', src: require('@/assets/tropical-forest.jpg')},
+                    {title: 'glacial', src: require('@/assets/glacial-lake.jpg')},
+                    {title: 'festival', src: require('@/assets/festival-2019.jpg')},
+                    {title: 'muertos', src: require('@/assets/los-muertos.jpg')},
+                    {title: 'interior', src: require('@/assets/original-interior.jpg')},
+                    {title: 'interior2', src: require('@/assets/original-interior-2.jpg')},
+                    {title: 'floor', src: require('@/assets/floor-removed.jpg')},
+                    {title: 'sliding-door', src: require('@/assets/sliding-door-prep.jpg')}
                 ]
             }
         }

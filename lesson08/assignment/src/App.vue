@@ -10,7 +10,7 @@
         <!-- named slot for the header goes here -->
         <header-component>
 
-          <template v-slot:h1>
+          <template #h1>
           </template>
           <template #h2>
           </template>

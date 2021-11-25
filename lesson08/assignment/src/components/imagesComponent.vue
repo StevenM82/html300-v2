@@ -18,7 +18,7 @@ export default {
             type: String,
             required: false,
         },
-        name: {
+        title: {
             type: String,
             required: false,
         }
