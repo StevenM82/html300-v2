@@ -12,10 +12,14 @@ export default {
     //creating the toggle mixin here
     data: () => ({
         isToggled = false,
+        border: none
     }),
     methods: {
         toggleBorder() {
             isToggled = !isToggled
+            if(isToggled == 'true') {
+                
+            }
         }
     }  
 }

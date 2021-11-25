@@ -5,16 +5,17 @@
       <img class="header-img" src="@/assets/lopez-island.jpg"
         alt="A view looking out toward the water from a tree filled and rocky island">
       <div class="flex-heading">
-        <!-- named slot for the header here -->
-        <HeaderComponent>
+        <!-- named slot for the header goes here -->
+        <header-component>
           <template #h1>
             <h1></h1>
           </template>
           <template #h2>
             <h2></h2>
           </template>
-        </HeaderComponent>
+        </header-component>
       </div>
+
     <nav class="nav">
       <ul class="nav-list">
         <!-- <router-link> acts like an <a> with the correct href -->
@@ -47,7 +48,7 @@
   export default {
     name: 'app',
     components: {
-      HeaderComponent
+      HeaderComponent,
     }
   }
 </script>
