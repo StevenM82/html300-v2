@@ -5,20 +5,9 @@
       <img class="header-img" src="@/assets/lopez-island.jpg"
         alt="A view looking out toward the water from a tree filled and rocky island">
       <div class="flex-heading">
-
-
-        <!-- named slot for the header goes here -->
-        <header-component>
-
-          <template #h1>
-          </template>
-          <template #h2>
-          </template>
-          
-        </header-component>
+        <h1>Wanderlust a la Carte</h1>
+        <h2>Not lost, but finding</h2>
       </div>
-
-
     <nav class="nav">
       <ul class="nav-list">
         <!-- <router-link> acts like an <a> with the correct href -->
@@ -46,12 +35,10 @@
 </template>
 
 <script>
-  import HeaderComponent from '@/components/HeaderComponent.vue'
-
   export default {
     name: 'app',
-    components: {
-      HeaderComponent,
+    data () {
+      return {}
     }
   }
 </script>
