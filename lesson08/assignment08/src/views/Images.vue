@@ -11,11 +11,13 @@
 </template>
 
 <script>
+    //There is something wrong with this import
     //import ImageComponent from '@/src/components/ImageComponent.vue'
 
     export default {
         name: 'Images',
         components: {
+            //There is something wrong with this component
             //ImageComponent
         },
         data() {
