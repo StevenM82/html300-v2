@@ -1,6 +1,6 @@
 <template>
     <li>
-        <img class="img-fluid"> {{ image.url }}
+        <img @click="toggleBorder()" class="img-fluid" :src="image.url"> {{ url }} {{ name }}
     </li>
 </template>
 
@@ -25,24 +25,17 @@ export default {
 
 
     //creating the toggle mixin here
-    // data: () => ({
-    //     isToggled = false,
-    //     border: none
-    // }),
-    // methods: {
-    //     toggleBorder() {
-    //         isToggled = !isToggled
-    //         if(isToggled == 'true') {
-                
-    //         }
-    //     }
-    // }  
+    methods: {
+        toggleBorder() {
+            isToggled = !isToggled
+        }
+    }  
 }
 
 </script>
 
 <style lang="scss">
     .border {
-        border: 1px black solid;
+        border: 10px black solid;
     }
 </style>
