@@ -105,6 +105,7 @@ gap: 2rem;
   @include grid-main;
   grid-area: 2 / 2 / 10 / 12;
   gap: 0.25rem;
+  padding: 0;
   //This gives grid dimensions for the nth-child of the images list
   li:nth-child(1) {
     grid-column: span 2;

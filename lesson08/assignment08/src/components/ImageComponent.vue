@@ -1,6 +1,6 @@
 <template>
     <li>
-        <img class="img-fluid"> {{ images.url }}
+        <img class="img-fluid"> {{ image.url }}
     </li>
 </template>
 
@@ -25,18 +25,18 @@ export default {
 
 
     //creating the toggle mixin here
-    data: () => ({
-        isToggled = false,
-        border: none
-    }),
-    methods: {
-        toggleBorder() {
-            isToggled = !isToggled
-            if(isToggled == 'true') {
+    // data: () => ({
+    //     isToggled = false,
+    //     border: none
+    // }),
+    // methods: {
+    //     toggleBorder() {
+    //         isToggled = !isToggled
+    //         if(isToggled == 'true') {
                 
-            }
-        }
-    }  
+    //         }
+    //     }
+    // }  
 }
 
 </script>
