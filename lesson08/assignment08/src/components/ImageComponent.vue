@@ -1,16 +1,15 @@
 <template>
     <li>
-        <img class="img-fluid"> {{ images.src }}
+        <img class="img-fluid"> {{ images.url }}
     </li>
 </template>
-
 
 <script>
 export default {
     name: 'ImageComponent',
 
     props: {
-        src: {
+        url: {
             type: String,
             required: true,
         },
