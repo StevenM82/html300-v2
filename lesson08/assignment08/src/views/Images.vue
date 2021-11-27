@@ -5,18 +5,21 @@
         <li 
             v-for="image in images" 
             :key="image.name"
-            ><img class="img-fluid" @click="toggleBorder()"  :class="'img-border'" :src="image.url">
+            ><img @click="isActive ? 'img-border' : null" 
+                :class="'img-fluid img-border'" :src="image.url" />
         </li>
     </ul>
 </template>
 
 <script>
     // import ImageComponent from '@/components/ImageComponent.vue'
+    // import ToggleMixin from '@/mixins/ToggleMixin.vue'
 
     export default {
         name: 'Images',
         components: {
-            // ImageComponent
+            // ImageComponent,
+            // ToggleMixin
         },
         data() {
             // you have to place the image url inside require() to get it to show from the array 
@@ -35,11 +38,11 @@
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
                 isActive: false,
-                methods: {
-                    toggleBorder() {
-                        isActive = !isActive
-                    }
-                }  
+                // method: {
+                //     toggleBorder() {
+                //         isActive = !isActive
+                //     }
+                // }
             }
         }
     }
