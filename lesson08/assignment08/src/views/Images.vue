@@ -5,7 +5,7 @@
         <li 
             v-for="image in images" 
             :key="image.name"
-            ><img class="img-fluid" :style="{border}" :src="image.url">
+            ><img class="img-fluid" @click="toggleBorder()"  :class="'img-border'" :src="image.url">
         </li>
     </ul>
 </template>
@@ -34,7 +34,18 @@
                     {name: 'floor', url: require('@/assets/floor-removed.jpg')},
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
+                isActive: false,
+                methods: {
+                    toggleBorder() {
+                        isActive = !isActive
+                    }
+                }  
             }
         }
     }
 </script>
+<style lang="scss">
+    .img-border {
+        border: 1px solid black;
+    }
+</style>
