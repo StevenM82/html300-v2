@@ -34,12 +34,12 @@
                     {name: 'floor', url: require('@/assets/floor-removed.jpg')},
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
-                isActive: false,
-                methods: {
-                    toggleBorder() {
-                        isActive = !isActive
-                    }
-                }  
+                // isActive: false,
+                // methods: {
+                //     toggleBorder() {
+                //         isActive = !isActive
+                //     }
+                // }
             }
         }
     }
