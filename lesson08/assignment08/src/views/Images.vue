@@ -37,8 +37,13 @@
                     {name: 'floor', url: require('@/assets/floor-removed.jpg')},
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
+<<<<<<< HEAD
                 isActive: false,
                 // method: {
+=======
+                // isActive: false,
+                // methods: {
+>>>>>>> dceac13319586cd27bedf5bc01a05e0ba77ac48b
                 //     toggleBorder() {
                 //         isActive = !isActive
                 //     }
