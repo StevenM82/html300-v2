@@ -1,16 +1,9 @@
 <template>
     <li>
-<<<<<<< HEAD
-        <img @click="toggleBorder()" 
-            :style="{ border: (isActive ? 'img-border' : null)}" 
-            :class="'img-fluid'" 
-            :src="image.url"> {{ url }} {{ name }}
-=======
         <img class="img-fluid" @click="toggleBorder()" 
             :class="isActive ? 'img-border' : 'no-border'"  
             :src="image.url"> 
             {{ name }} {{ url }} 
->>>>>>> dceac13319586cd27bedf5bc01a05e0ba77ac48b
     </li>
 </template>
 
@@ -50,11 +43,8 @@ export default {
 <style lang="scss">
     .img-border {
         border: 2px solid black;
-<<<<<<< HEAD
-=======
     }
     .no-border {
         border: 2px solid #fff;
->>>>>>> dceac13319586cd27bedf5bc01a05e0ba77ac48b
     }
 </style>

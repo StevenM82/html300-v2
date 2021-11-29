@@ -5,7 +5,7 @@
         <li 
             v-for="image in images" 
             :key="image.name"
-            ><img @click="isActive ? 'img-border' : null" 
+            ><img @click="isActive ? 'img-border' : 'no-border'" 
                 :class="'img-fluid img-border'" :src="image.url" />
         </li>
     </ul>
@@ -37,13 +37,8 @@
                     {name: 'floor', url: require('@/assets/floor-removed.jpg')},
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
-<<<<<<< HEAD
-                isActive: false,
-                // method: {
-=======
                 // isActive: false,
                 // methods: {
->>>>>>> dceac13319586cd27bedf5bc01a05e0ba77ac48b
                 //     toggleBorder() {
                 //         isActive = !isActive
                 //     }
@@ -55,5 +50,8 @@
 <style lang="scss">
     .img-border {
         border: 1px solid black;
+    }
+    .no-border {
+        border: 2px solid #fff;
     }
 </style>
