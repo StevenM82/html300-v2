@@ -2,23 +2,31 @@
     <ul class="section-images">
         <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
         <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
-        <li 
+        <image-component 
             v-for="image in images" 
             :key="image.name"
             ><img @click="isActive ? 'img-border' : 'no-border'" 
                 :class="'img-fluid img-border'" :src="image.url" />
-        </li>
+        </image-component>
+        
+        <!-- this is for testing to make sure that I have a base line to go back to -->
+        <!-- <li 
+            v-for="image in images" 
+            :key="image.name"
+            ><img @click="isActive ? 'img-border' : 'no-border'" 
+                :class="'img-fluid img-border'" :src="image.url" />
+        </li> -->
     </ul>
 </template>
 
 <script>
-    // import ImageComponent from '@/components/ImageComponent.vue'
+    import ImageComponent from '@/components/ImageComponent.vue'
     // import ToggleMixin from '@/mixins/ToggleMixin.vue'
 
     export default {
         name: 'Images',
         components: {
-            // ImageComponent,
+            ImageComponent,
             // ToggleMixin
         },
         data() {
