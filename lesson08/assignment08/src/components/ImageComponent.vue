@@ -29,7 +29,7 @@ export default {
     //creating the toggle mixin here
     data () {
         return {
-            isActive = false,
+            isActive: false,
         }
     },
     methods: {
