@@ -1,10 +1,12 @@
 <template>
-    <li>
-        <img class="img-fluid" @click="toggleBorder()" 
-            :class="isActive ? 'img-border' : 'no-border'"  
-            :src="image.url"> 
-            {{ name }} {{ url }} 
-    </li>
+    <div>
+        <li>
+            <img class="img-fluid" @click="toggleBorder()" 
+                :class="isActive ? 'img-border' : 'no-border'"  
+                :src="image.url"> 
+                {{ url }} 
+        </li>
+    </div>
 </template>
 
 <script>
@@ -27,16 +29,16 @@ export default {
     },
 
     //creating the toggle mixin here
-    data () {
-        return {
-            isActive: false,
-        }
-    },
-    methods: {
-        toggleBorder() {
-            isActive = !isActive
-        }
-    },
+    // data () {
+    //     return {
+    //         isActive: false
+    //     }
+    // },
+    // methods: {
+    //     toggleBorder() {
+    //         this.isActive = !isActive
+    //     }
+    // },
 }
 </script>
 

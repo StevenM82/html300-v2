@@ -5,29 +5,25 @@
         <image-component 
             v-for="image in images" 
             :key="image.name"
-            ><img @click="isActive ? 'img-border' : 'no-border'" 
-                :class="'img-fluid img-border'" :src="image.url" />
+            >
         </image-component>
         
         <!-- this is for testing to make sure that I have a base line to go back to -->
         <!-- <li 
             v-for="image in images" 
             :key="image.name"
-            ><img @click="isActive ? 'img-border' : 'no-border'" 
-                :class="'img-fluid img-border'" :src="image.url" />
+            ><img :class="'img-fluid img-border'" :src="image.url" />
         </li> -->
     </ul>
 </template>
 
 <script>
     import ImageComponent from '@/components/ImageComponent.vue'
-    // import ToggleMixin from '@/mixins/ToggleMixin.vue'
 
     export default {
         name: 'Images',
         components: {
             ImageComponent,
-            // ToggleMixin
         },
         data() {
             // you have to place the image url inside require() to get it to show from the array 
@@ -45,21 +41,7 @@
                     {name: 'floor', url: require('@/assets/floor-removed.jpg')},
                     {name: 'sliding-door', url: require('@/assets/sliding-door-prep.jpg')},
                 ],
-                // isActive: false,
-                // methods: {
-                //     toggleBorder() {
-                //         isActive = !isActive
-                //     }
-                // }
             }
         }
     }
 </script>
-<style lang="scss">
-    .img-border {
-        border: 1px solid black;
-    }
-    .no-border {
-        border: 2px solid #fff;
-    }
-</style>
