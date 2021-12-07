@@ -3,14 +3,14 @@
         <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
         <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
         
-        <li>
-            <image-component  
+        <!-- <li> -->
+            <image-component 
                 v-for="image in images" 
-                :key="image.name"
-                :src="image.url"
+                :key="image.name" 
+                :url="image.url"
                 >
             </image-component>
-        </li>
+        <!-- </li> -->
         
         <!-- this is for testing -->
         <!-- <li 
@@ -22,11 +22,13 @@
 </template>
 
 <script>
+    //comment out the ImageComponent import and below in the 'components:' for testing
     import ImageComponent from '@/components/ImageComponent.vue'
 
     export default {
         name: 'Images',
         components: {
+            //comment out the ImageComponent for testing
             ImageComponent,
         },
         data() {

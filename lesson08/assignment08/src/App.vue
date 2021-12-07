@@ -1,11 +1,10 @@
 <template>
 <!-- set the header, nav and footer in this template for the entire website -->
   <div class="grid-container">
-    <main class="main">
+    <header class="header">
       <img class="header-img" src="@/assets/lopez-island.jpg"
         alt="A view looking out toward the water from a tree filled and rocky island">
       <div class="flex-heading">
-
 
         <!-- named slot for the header goes here -->
         <header-component>
@@ -17,7 +16,6 @@
           
         </header-component>
       </div>
-
 
     <nav class="nav">
       <ul class="nav-list">
@@ -33,7 +31,7 @@
         </li>
       </ul>
     </nav>
-    </main>
+    </header>
     <router-view/>
     <footer class="footer">
       <ul class="footer-nav">

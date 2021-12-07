@@ -1,7 +1,7 @@
 <template>
-    <img class="img-fluid" 
-        :src="url"
-        > 
+<li class="img-border">
+    <img class="img-border">{{ url }}
+</li>
 </template>
 
 <script>
