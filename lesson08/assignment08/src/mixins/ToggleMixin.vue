@@ -8,11 +8,11 @@ export default {
             isActive: false,
         }
     },
-    methods: {
-        toggleBorder() {
-            isActive = !isActive
-        }
-    }  
+    // methods: {
+    //     toggleBorder() {
+    //         isActive = !isActive
+    //     }
+    // }  
 }
 
 </script>

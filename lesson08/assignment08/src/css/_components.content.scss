@@ -110,30 +110,30 @@ gap: 2rem;
   li:nth-child(1) {
     grid-column: span 2;
     grid-row: span 1;
-}
-li:nth-child(2) {
-    grid-column: span 3;
-    grid-row: span 5;
-}
-li:nth-child(4) {
-    grid-row: span 2;
-}
-li:nth-child(6) {
-    grid-column: span 3;
-    grid-row: span 1;
-}
-li:nth-child(7) {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-li:nth-child(8) {
-    grid-column: span 1;
-    grid-row: span 2;
-}
-li:nth-child(10) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
+  }
+  li:nth-child(2) {
+      grid-column: span 3;
+      grid-row: span 5;
+  }
+  li:nth-child(4) {
+      grid-row: span 2;
+  }
+  li:nth-child(6) {
+      grid-column: span 3;
+      grid-row: span 1;
+  }
+  li:nth-child(7) {
+      grid-column: span 1;
+      grid-row: span 1;
+  }
+  li:nth-child(8) {
+      grid-column: span 1;
+      grid-row: span 2;
+  }
+  li:nth-child(10) {
+      grid-column: span 2;
+      grid-row: span 2;
+  }
 }
 
 //Set the section element to be the outer grid container for the body of the page

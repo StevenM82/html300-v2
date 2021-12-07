@@ -2,13 +2,17 @@
     <ul class="section-images">
         <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
         <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
-        <image-component 
-            v-for="image in images" 
-            :key="image.name"
-            >
-        </image-component>
         
-        <!-- this is for testing to make sure that I have a base line to go back to -->
+        <li>
+            <image-component  
+                v-for="image in images" 
+                :key="image.name"
+                :src="image.url"
+                >
+            </image-component>
+        </li>
+        
+        <!-- this is for testing -->
         <!-- <li 
             v-for="image in images" 
             :key="image.name"
@@ -45,3 +49,12 @@
         }
     }
 </script>
+
+<style lang="scss">
+    .img-border {
+        border: 2px solid black;
+    }
+    .no-border {
+        border: 2px solid #fff;
+    }
+</style>

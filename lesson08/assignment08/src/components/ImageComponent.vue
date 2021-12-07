@@ -1,44 +1,36 @@
 <template>
-    <div>
-        <li>
-            <img class="img-fluid" @click="toggleBorder()" 
-                :class="isActive ? 'img-border' : 'no-border'"  
-                :src="image.url"> 
-                {{ url }} 
-        </li>
-    </div>
+    <img class="img-fluid" 
+        :src="url"
+        > 
 </template>
 
 <script>
 export default {
     name: 'ImageComponent',
-
-    props: {
-        name: {
-            type: String,
-            required: true,
-        },
-        url: {
-            type: String,
-            required: true,
-        },
-        alt: {
-            type: String,
-            required: false,
+    data () {
+        return {
+            isActive: false,
+            props: {
+                name: {
+                    type: String,
+                    required: true,
+                },
+                url: {
+                    type: String,
+                    required: true,
+                },
+                alt: {
+                    type: String,
+                    required: false,
+                }
+            },
+            // methods: {
+            //     toggleBorder() {
+            //         isActive = !isActive
+            //     }
+            // }
         }
-    },
-
-    //creating the toggle mixin here
-    // data () {
-    //     return {
-    //         isActive: false
-    //     }
-    // },
-    // methods: {
-    //     toggleBorder() {
-    //         this.isActive = !isActive
-    //     }
-    // },
+    }
 }
 </script>
 
