@@ -1,7 +1,5 @@
 <template>
-<li class="img-border">
-    <img class="img-border">{{ url }}
-</li>
+        <img> 
 </template>
 
 <script>
@@ -21,14 +19,9 @@ export default {
                 },
                 alt: {
                     type: String,
-                    required: false,
+                    required: true,
                 }
-            },
-            // methods: {
-            //     toggleBorder() {
-            //         isActive = !isActive
-            //     }
-            // }
+            }
         }
     }
 }

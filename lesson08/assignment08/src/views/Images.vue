@@ -3,14 +3,17 @@
         <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
         <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
         
-        <!-- <li> -->
+        <li
+            v-for="image in images" 
+            :key="image.name"
+            :name="image.name"
+            >
             <image-component 
-                v-for="image in images" 
-                :key="image.name" 
-                :url="image.url"
-                >
-            </image-component>
-        <!-- </li> -->
+                v-bind="image" 
+                :class="'img-fluid img-border'" 
+                :src="image.url"
+                />
+        </li>
         
         <!-- this is for testing -->
         <!-- <li 
@@ -22,7 +25,7 @@
 </template>
 
 <script>
-    //comment out the ImageComponent import and below in the 'components:' for testing
+    //comment out the ImageComponent import and the 'components:' for testing
     import ImageComponent from '@/components/ImageComponent.vue'
 
     export default {
@@ -36,7 +39,7 @@
             // otherwise it will just show the url and not load the image
             return {
                 images: [
-                    {name: 'camping', url: require('@/assets/camping-wings-veggies.jpg')},
+                    {name: 'camping', url: require('@/assets/camping-wings-veggies.jpg'), alt: 'chicken wings and skewered veggies over a bbq grate'},
                     {name: 'market', url: require('@/assets/the-market.jpg')},
                     {name: 'forest', url: require('@/assets/tropical-forest.jpg')},
                     {name: 'glacial', url: require('@/assets/glacial-lake.jpg')},
