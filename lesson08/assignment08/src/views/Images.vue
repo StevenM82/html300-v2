@@ -1,8 +1,7 @@
 <template>
     <ul class="section-images">
-        <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image  -->
-        <!-- using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
-        
+        <!-- setting the :src="image.url" is required to bind source, aka src=, to the url of the image 
+        using img-fluid automatically sets the image dimensions to fill a single grid square when using CSS Grid -->
         <li
             v-for="image in images" 
             :key="image.name"
@@ -10,9 +9,7 @@
             >
             <image-component 
                 v-bind="image" 
-                @click="toggleBorder()"
                 class="img-fluid"
-                :class="isShowing ? 'img-border' : 'no-border'"
                 :src="image.url"
             />
         </li>
@@ -21,11 +18,9 @@
 
 <script>
     import ImageComponent from '@/components/ImageComponent.vue'
-    import { toggleMixin } from '../mixins/ToggleMixin.js'
 
     export default {
         name: 'Images',
-        mixins: [toggleMixin],
         components: {
             ImageComponent,
         },
@@ -49,12 +44,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    .img-border {
-        border: 2px solid black;
-    }
-    .no-border {
-        border: 2px solid #fff;
-    }
-</style>
