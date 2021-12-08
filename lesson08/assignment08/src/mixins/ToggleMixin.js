@@ -1,18 +1,12 @@
-
-const toggleMixin = {
-    created() {
-        this.toggleBorder()
+export const toggleMixin = {
+    data() {
+        return {
+            isShowing: false
+        }
     },
     methods: {
         toggleBorder() {
-            isActive = !isActive
+            this.isShowing = !this.isShowing
         }
     }
 }
-  
-// define an app that uses this mixin
-const app = Vue.createApp({
-mixins: [myMixin]
-})
-
-app.mount('#mixins-basic') // => "hello from mixin!"

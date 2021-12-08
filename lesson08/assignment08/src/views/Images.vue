@@ -10,28 +10,23 @@
             >
             <image-component 
                 v-bind="image" 
-                :class="'img-fluid img-border'" 
+                @click="toggleBorder()"
+                class="img-fluid"
+                :class="isShowing ? 'img-border' : 'no-border'"
                 :src="image.url"
-                />
+            />
         </li>
-        
-        <!-- this is for testing -->
-        <!-- <li 
-            v-for="image in images" 
-            :key="image.name"
-            ><img :class="'img-fluid img-border'" :src="image.url" />
-        </li> -->
     </ul>
 </template>
 
 <script>
-    //comment out the ImageComponent import and the 'components:' for testing
     import ImageComponent from '@/components/ImageComponent.vue'
+    import { toggleMixin } from '../mixins/ToggleMixin.js'
 
     export default {
         name: 'Images',
+        mixins: [toggleMixin],
         components: {
-            //comment out the ImageComponent for testing
             ImageComponent,
         },
         data() {

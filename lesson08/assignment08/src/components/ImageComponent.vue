@@ -1,5 +1,5 @@
 <template>
-        <img> 
+    <img> 
 </template>
 
 <script>
@@ -7,7 +7,6 @@ export default {
     name: 'ImageComponent',
     data () {
         return {
-            isActive: false,
             props: {
                 name: {
                     type: String,
